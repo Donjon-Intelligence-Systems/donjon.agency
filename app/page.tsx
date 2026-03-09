@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Sparkles, Calendar, ExternalLink, Beaker, Wrench, Users, Rocket, MessageSquare, Shield, Check, X, Zap, Target, Lock, Bot, Headphones, CalendarDays, Mail, Search, MapPin, Calculator, BarChart3, FileCheck, Timer, HelpCircle, Database, Server, Brain, Cpu, Cloud, Code, Terminal, Container, Workflow, Shell, Heart, Flame, Box, Laptop, GitBranch, Hexagon } from "lucide-react"
+import { ArrowRight, Sparkles, Calendar, ExternalLink, Beaker, Wrench, Users, Rocket, MessageSquare, Shield, Check, X, Zap, Target, Lock, Bot, Headphones, CalendarDays, Mail, Search, MapPin, Calculator, BarChart3, FileCheck, Timer, HelpCircle, Database, Server, Brain, Cpu, Cloud, Code, Terminal, Container, Workflow, Shell, Heart, Flame, Box, Laptop, GitBranch, Hexagon, FileCode, Layers, Triangle, Hash, MessageCircle, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -184,24 +184,38 @@ const faqs = [
 ]
 
 const techStack = [
-  { name: "OpenClaw", category: "Agent Framework", icon: Shell, color: "sky", featured: true },
-  { name: "OpenWork", category: "Dev Environment", icon: Laptop, color: "indigo" },
-  { name: "OpenCode", category: "Agent IDE", icon: Code, color: "emerald" },
-  { name: "Letta", category: "Memory", icon: Database, color: "indigo" },
-  { name: "OpenAI", category: "Models", icon: Brain, color: "emerald" },
-  { name: "Anthropic", category: "Models", icon: Bot, color: "violet" },
-  { name: "Ollama", category: "Local AI", icon: Cpu, color: "amber" },
-  { name: "Llama", category: "Local Models", icon: Server, color: "sky" },
-  { name: "Pi", category: "Infra AI", icon: Hexagon, color: "pink" },
-  { name: "Warp", category: "Terminal", icon: Zap, color: "orange" },
-  { name: "E2B", category: "Sandbox", icon: Box, color: "slate" },
-  { name: "Koala", category: "Analytics", icon: Heart, color: "rose" },
-  { name: "Next.js", category: "Frontend", icon: Code, color: "slate" },
-  { name: "Docker", category: "Infrastructure", icon: Container, color: "sky" },
-  { name: "PostgreSQL", category: "Database", icon: Database, color: "indigo" },
-  { name: "Supabase", category: "Backend", icon: Cloud, color: "emerald" },
-  { name: "n8n", category: "Automation", icon: Workflow, color: "violet" },
-  { name: "TypeScript", category: "Language", icon: Terminal, color: "sky" },
+  { name: "OpenClaw", category: "Agent Framework", icon: Shell, color: "#FF6B35", featured: true, brandColor: "#FF6B35" },
+  { name: "Letta", category: "Memory & Agents", icon: Database, color: "indigo", featured: true, brandColor: "#faf9f5" },
+  { name: "OpenWork", category: "Agent Environment", icon: Laptop, color: "violet", brandColor: "#8B5CF6" },
+  { name: "OpenCode", category: "Agent IDE", icon: Code, color: "emerald", brandColor: "#000000" },
+  { name: "OpenAI", category: "Models", icon: Brain, color: "emerald", brandColor: "#10A37F" },
+  { name: "Anthropic", category: "Models", icon: Bot, color: "violet", brandColor: "#d97757" },
+  { name: "Ollama", category: "Local Models", icon: Cpu, color: "amber", brandColor: "#8B5CF6" },
+  { name: "LM Studio", category: "Local Runtime", icon: Box, color: "orange", brandColor: "#3B82F6" },
+  { name: "Llama", category: "Local Models", icon: Server, color: "sky", brandColor: "#3B82F6" },
+  { name: "Cursor", category: "AI Editor", icon: FileCode, color: "blue", brandColor: "#000000" },
+  { name: "Warp", category: "Terminal", icon: Zap, color: "orange", brandColor: "#7C3AED" },
+  { name: "Docker", category: "Containers", icon: Container, color: "sky", brandColor: "#1D63ED" },
+  { name: "Git", category: "Version Control", icon: GitBranch, color: "red", brandColor: "#F05032" },
+  { name: "PostgreSQL", category: "Database", icon: Database, color: "indigo", brandColor: "#336791" },
+  { name: "Neon", category: "Postgres", icon: Cloud, color: "cyan", brandColor: "#3DFFFF" },
+  { name: "Redis", category: "Cache", icon: Database, color: "red", brandColor: "#D82C20" },
+  { name: "Supabase", category: "Backend", icon: Cloud, color: "emerald", brandColor: "#34B27B" },
+  { name: "Vercel", category: "Hosting", icon: Triangle, color: "slate", brandColor: "#0070F3" },
+  { name: "Notion", category: "Knowledge", icon: FileText, color: "slate", brandColor: "#000000" },
+  { name: "Miro", category: "Whiteboard", icon: Layers, color: "yellow", brandColor: "#FFD02F" },
+  { name: "n8n", category: "Automation", icon: Workflow, color: "violet", brandColor: "#EA4B71" },
+  { name: "E2B", category: "Sandbox", icon: Box, color: "slate", brandColor: "#6366F1" },
+  { name: "Pi", category: "Infra AI", icon: Hexagon, color: "pink", brandColor: "#EC4899" },
+  { name: "Koala", category: "Analytics", icon: Heart, color: "rose", brandColor: "#F43F5E" },
+  { name: "Next.js", category: "Frontend", icon: Code, color: "slate", brandColor: "#000000" },
+  { name: "React", category: "UI", icon: Layers, color: "sky", brandColor: "#61DAFB" },
+  { name: "TypeScript", category: "Language", icon: Terminal, color: "sky", brandColor: "#3178C6" },
+  { name: "Node.js", category: "Runtime", icon: Server, color: "green", brandColor: "#339933" },
+  { name: "Python", category: "Language", icon: Terminal, color: "yellow", brandColor: "#306998" },
+  { name: "Slack", category: "Chat", icon: MessageCircle, color: "violet", brandColor: "#4A154B" },
+  { name: "Discord", category: "Community", icon: MessageCircle, color: "indigo", brandColor: "#5865F2" },
+  { name: "Cal.com", category: "Scheduling", icon: Calendar, color: "emerald", brandColor: "#141414" },
 ]
 
 export default function Home() {
@@ -328,8 +342,8 @@ export default function Home() {
       <section className="py-16 px-6 bg-slate-900/20 border-y border-white/5 overflow-hidden">
         <div className="max-w-6xl mx-auto mb-10">
           <div className="text-center">
-            <h2 className="text-2xl font-light text-white mb-2">Built With Modern Stack</h2>
-            <p className="text-slate-400">OpenClaude • Letta Memory • Multi-Model Architecture</p>
+            <h2 className="text-2xl font-light text-white mb-2">Built With Production Stack</h2>
+            <p className="text-slate-400">{techStack.length}+ Technologies • Agent-First Architecture • Full Ownership</p>
           </div>
         </div>
 
@@ -342,11 +356,19 @@ export default function Home() {
                 key={`row1-${i}`}
                 className={`glass-panel px-6 py-4 flex items-center gap-3 hover:border-sky-500/30 transition-colors cursor-pointer group min-w-[180px] ${tech.featured ? 'border-sky-500/50 bg-sky-500/5' : ''}`}
               >
-                <div className={`h-10 w-10 rounded-lg bg-${tech.color}-500/10 flex items-center justify-center group-hover:scale-110 transition-transform ${tech.featured ? 'ring-2 ring-sky-500/30' : ''}`}>
-                  <tech.icon className={`h-5 w-5 text-${tech.color}-400`} />
+                <div 
+                  className={`h-10 w-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform ${tech.featured ? 'ring-2 ring-sky-500/30' : ''}`}
+                  style={{ backgroundColor: `${tech.brandColor}15` }}
+                >
+                  <tech.icon className="h-5 w-5" style={{ color: tech.brandColor }} />
                 </div>
                 <div>
-                  <div className={`font-medium text-sm ${tech.featured ? 'text-sky-400' : 'text-slate-200'}`}>{tech.name}</div>
+                  <div 
+                    className={`font-medium text-sm ${tech.featured ? 'text-sky-400' : 'text-slate-200'}`}
+                    style={tech.featured ? {} : { color: tech.brandColor }}
+                  >
+                    {tech.name}
+                  </div>
                   <div className="text-slate-500 text-xs">{tech.category}</div>
                 </div>
               </div>
@@ -358,16 +380,24 @@ export default function Home() {
           <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#030712] to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#030712] to-transparent z-10 pointer-events-none" />
           <div className="flex gap-6 animate-scroll-reverse" style={{ width: 'fit-content' }}>
-            {[...techStack.slice(9), ...techStack.slice(0, 9), ...techStack.slice(9), ...techStack.slice(0, 9)].map((tech, i) => (
+            {[...techStack.slice(15), ...techStack.slice(0, 15), ...techStack.slice(15), ...techStack.slice(0, 15)].map((tech, i) => (
               <div
                 key={`row2-${i}`}
                 className={`glass-panel px-6 py-4 flex items-center gap-3 hover:border-indigo-500/30 transition-colors cursor-pointer group min-w-[180px] ${tech.featured ? 'border-sky-500/50 bg-sky-500/5' : ''}`}
               >
-                <div className={`h-10 w-10 rounded-lg bg-${tech.color}-500/10 flex items-center justify-center group-hover:scale-110 transition-transform ${tech.featured ? 'ring-2 ring-sky-500/30' : ''}`}>
-                  <tech.icon className={`h-5 w-5 text-${tech.color}-400`} />
+                <div 
+                  className={`h-10 w-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform ${tech.featured ? 'ring-2 ring-sky-500/30' : ''}`}
+                  style={{ backgroundColor: `${tech.brandColor}15` }}
+                >
+                  <tech.icon className="h-5 w-5" style={{ color: tech.brandColor }} />
                 </div>
                 <div>
-                  <div className={`font-medium text-sm ${tech.featured ? 'text-sky-400' : 'text-slate-200'}`}>{tech.name}</div>
+                  <div 
+                    className={`font-medium text-sm ${tech.featured ? 'text-sky-400' : 'text-slate-200'}`}
+                    style={tech.featured ? {} : { color: tech.brandColor }}
+                  >
+                    {tech.name}
+                  </div>
                   <div className="text-slate-500 text-xs">{tech.category}</div>
                 </div>
               </div>
