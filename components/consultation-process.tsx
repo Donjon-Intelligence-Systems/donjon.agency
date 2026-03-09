@@ -5,55 +5,55 @@ export function ConsultationProcess() {
   const steps = [
     {
       icon: <ClipboardList className="h-8 w-8 text-[#0076FF]" />,
-      title: "Discovery",
+      title: "Workflow Discovery",
       description:
-        "We begin with a thorough assessment of your business needs, challenges, and goals to understand your unique situation.",
+        "We map your current business processes to identify tasks that consume human time but don't require human judgment—prime candidates for agent automation.",
       timeframe: "Week 1",
     },
     {
       icon: <Users className="h-8 w-8 text-[#0076FF]" />,
-      title: "Stakeholder Interviews",
+      title: "Agent Architecture Design",
       description:
-        "We conduct interviews with key stakeholders to gather insights and understand different perspectives within your organization.",
+        "We design your agent system using OpenClaw framework—defining agent roles, memory structures (Letta), tool integrations, and decision-making flows.",
       timeframe: "Week 1-2",
     },
     {
       icon: <PieChart className="h-8 w-8 text-[#0076FF]" />,
-      title: "Data Analysis",
+      title: "Memory & Context Planning",
       description:
-        "Our team analyzes your existing data infrastructure, processes, and workflows to identify opportunities for AI integration.",
+        "We architect persistent memory systems so your agents remember context across conversations, learn from interactions, and build institutional knowledge over time.",
       timeframe: "Week 2-3",
     },
     {
       icon: <Lightbulb className="h-8 w-8 text-[#0076FF]" />,
-      title: "Solution Design",
+      title: "Integration Mapping",
       description:
-        "We design a tailored AI solution that addresses your specific needs and aligns with your business objectives.",
+        "We identify all integration points—CRMs, email platforms, databases, APIs—and design secure connections that keep your data in your control.",
       timeframe: "Week 3-4",
     },
     {
       icon: <FileText className="h-8 w-8 text-[#0076FF]" />,
-      title: "Proposal Presentation",
+      title: "Agent Build & Testing",
       description:
-        "We present a comprehensive proposal that outlines the recommended solutions, implementation timeline, and expected outcomes.",
-      timeframe: "Week 4",
+        "We build the agent system, connect your tools, create memory schemas, and run real scenarios to ensure everything works before going live.",
+      timeframe: "Week 4-5",
     },
     {
       icon: <Zap className="h-8 w-8 text-[#0076FF]" />,
-      title: "Implementation Planning",
+      title: "Deployment & Handoff",
       description:
-        "Once approved, we develop a detailed implementation plan with clear milestones, responsibilities, and success metrics.",
-      timeframe: "Week 5",
+        "We deploy to your infrastructure (self-hosted or cloud), provide training documentation, and transfer full ownership so you control your agent system.",
+      timeframe: "Week 5-6",
     },
   ]
 
   return (
     <div className="space-y-12">
       <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#1A365D] dark:text-blue-300 mb-6">Our Consultation Framework</h2>
+        <h2 className="text-3xl font-bold text-[#1A365D] dark:text-blue-300 mb-6">Our Agent Systems Framework</h2>
         <p className="text-gray-600 dark:text-gray-300 text-lg">
-          We've developed a structured approach to help businesses identify and implement AI solutions that drive real
-          value. Our six-step process ensures we thoroughly understand your needs and deliver tailored recommendations.
+          A battle-tested approach to building autonomous AI agents with persistent memory. From workflow analysis to full deployment, 
+          we architect systems that remember, reason, and deliver real business impact.
         </p>
       </div>
 
@@ -76,35 +76,35 @@ export function ConsultationProcess() {
         ))}
       </div>
 
-      <div className="bg-[#0076FF]/5 dark:bg-blue-900/20 p-6 rounded-lg max-w-3xl mx-auto">
-        <h3 className="text-xl font-bold text-[#1A365D] dark:text-blue-300 mb-4">Why Our Approach Works</h3>
-        <ul className="space-y-2">
-          <li className="flex items-start">
-            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0076FF] flex items-center justify-center text-white text-xs mr-2 mt-0.5">
-              ✓
-            </div>
-            <span className="text-gray-700 dark:text-gray-200">Tailored to your specific business needs and industry context</span>
-          </li>
-          <li className="flex items-start">
-            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0076FF] flex items-center justify-center text-white text-xs mr-2 mt-0.5">
-              ✓
-            </div>
-            <span className="text-gray-700 dark:text-gray-200">Focuses on practical solutions with measurable business impact</span>
-          </li>
-          <li className="flex items-start">
-            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0076FF] flex items-center justify-center text-white text-xs mr-2 mt-0.5">
-              ✓
-            </div>
-            <span className="text-gray-700 dark:text-gray-200">Involves key stakeholders throughout the process to ensure alignment</span>
-          </li>
-          <li className="flex items-start">
-            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0076FF] flex items-center justify-center text-white text-xs mr-2 mt-0.5">
-              ✓
-            </div>
-            <span className="text-gray-700 dark:text-gray-200">Provides clear implementation roadmap with defined milestones</span>
-          </li>
-        </ul>
-      </div>
+    <div className="bg-[#0076FF]/5 dark:bg-blue-900/20 p-6 rounded-lg max-w-3xl mx-auto">
+      <h3 className="text-xl font-bold text-[#1A365D] dark:text-blue-300 mb-4">Why Agent Systems Over Traditional Automation</h3>
+      <ul className="space-y-2">
+        <li className="flex items-start">
+          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0076FF] flex items-center justify-center text-white text-xs mr-2 mt-0.5">
+            ✓
+          </div>
+          <span className="text-gray-700 dark:text-gray-200"><strong>Memory & Context:</strong> Agents remember past interactions and adapt behavior—unlike rigid automation</span>
+        </li>
+        <li className="flex items-start">
+          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0076FF] flex items-center justify-center text-white text-xs mr-2 mt-0.5">
+            ✓
+          </div>
+          <span className="text-gray-700 dark:text-gray-200"><strong>Full Ownership:</strong> You own the code, the agents, and your data—no monthly SaaS fees or vendor lock-in</span>
+        </li>
+        <li className="flex items-start">
+          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0076FF] flex items-center justify-center text-white text-xs mr-2 mt-0.5">
+            ✓
+          </div>
+          <span className="text-gray-700 dark:text-gray-200"><strong>Decision-Making:</strong> Agents analyze, reason, and take action—moving data is just the beginning</span>
+        </li>
+        <li className="flex items-start">
+          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0076FF] flex items-center justify-center text-white text-xs mr-2 mt-0.5">
+            ✓
+          </div>
+          <span className="text-gray-700 dark:text-gray-200"><strong>Scalable Architecture:</strong> Built on OpenClaw with Letta memory—designed for complex, multi-step workflows</span>
+        </li>
+      </ul>
+    </div>
     </div>
   )
 }

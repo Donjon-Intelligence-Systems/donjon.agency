@@ -66,7 +66,7 @@ export function ConsultationCenter({
           size="sm"
           asChild
         >
-          <a href="/consultation">
+          <a href="/consulting">
             <Calendar className="mr-2 h-4 w-4" />
             Book Consultation
           </a>
@@ -137,7 +137,7 @@ export function ConsultationCenter({
             className="bg-indigo-500 hover:bg-indigo-400 text-white font-bold"
             asChild
           >
-            <a href="/consultation">
+            <a href="/consulting">
               <Calendar className="mr-2 h-4 w-4" />
               Schedule Consultation
               <ArrowRight className="ml-2 h-4 w-4" />

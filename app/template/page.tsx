@@ -307,7 +307,7 @@ export default function TemplateShowcase() {
                 className="bg-white/10 text-white hover:bg-white/20 border-white/20 font-bold text-lg px-8"
                 asChild
               >
-                <Link href="/consultation">Schedule a Demo</Link>
+                <Link href="/consulting">Schedule a Demo</Link>
               </Button>
             </div>
 

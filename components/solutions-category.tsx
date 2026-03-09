@@ -104,7 +104,7 @@ export function SolutionsCategory({ id, name, description, tools, color, icon }:
           <div className="col-span-full text-center p-8 border-2 border-dashed rounded-xl border-gray-300 dark:border-gray-700">
             <p className="text-gray-600 dark:text-gray-400 mb-4">No tools available in this category yet.</p>
             <Button asChild variant="outline">
-              <Link href="/consultation">Request Early Access</Link>
+              <Link href="/consulting">Request Early Access</Link>
             </Button>
           </div>
         )}

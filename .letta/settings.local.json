@@ -1,0 +1,17 @@
+{
+  "lastAgent": "agent-48c8e15c-d25f-4a48-b931-e1025689560e",
+  "sessionsByServer": {
+    "api.letta.com": {
+      "agentId": "agent-48c8e15c-d25f-4a48-b931-e1025689560e",
+      "conversationId": "default"
+    }
+  },
+  "lastSession": {
+    "agentId": "agent-48c8e15c-d25f-4a48-b931-e1025689560e",
+    "conversationId": "default"
+  },
+  "memoryReminderInterval": "auto-compaction",
+  "reflectionTrigger": "compaction-event",
+  "reflectionBehavior": "auto-launch",
+  "reflectionStepCount": 25
+}

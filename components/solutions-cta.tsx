@@ -17,7 +17,7 @@ export function SolutionsCTA() {
               <Link href="/assessments/new">Take the AI Readiness Assessment</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 dark:border-white/80 dark:hover:bg-white/20">
-              <Link href="/consultation">Schedule a Consultation</Link>
+              <Link href="/consulting">Schedule a Consultation</Link>
             </Button>
           </div>
         </div>

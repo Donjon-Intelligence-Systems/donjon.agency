@@ -171,7 +171,7 @@ export default function LabsPage() {
             className="bg-sky-500 hover:bg-sky-400 text-black font-bold"
             asChild
           >
-            <Link href="/consultation">Start a Conversation</Link>
+            <Link href="/consulting">Start a Conversation</Link>
           </Button>
         </div>
       </section>

@@ -324,7 +324,7 @@ export function ConsultationHistory({ className }: ConsultationHistoryProps) {
               : "Book your first consultation to get started with expert guidance."}
           </p>
           <Button asChild className="bg-sky-500 hover:bg-sky-400">
-            <a href="/consultation">
+            <a href="/consulting">
               <Calendar className="mr-2 h-4 w-4" />
               Book Consultation
             </a>

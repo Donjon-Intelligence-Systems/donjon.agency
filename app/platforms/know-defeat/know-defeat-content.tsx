@@ -124,7 +124,7 @@ export function KnowDefeatContent() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button asChild size="lg" className="bg-[#00d2ff] hover:bg-[#00d2ff]/90 text-black font-bold">
-                <Link href="/consultation">
+                <Link href="/consulting">
                   Schedule Consultation
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -466,7 +466,7 @@ export function KnowDefeatContent() {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button asChild size="lg" className="bg-[#00d2ff] hover:bg-[#00d2ff]/90 text-black h-12 px-8 text-lg font-bold">
-              <Link href="/consultation">Schedule Consultation</Link>
+              <Link href="/consulting">Schedule Consultation</Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="border-white/10 hover:border-[#00d2ff]/50 hover:bg-[#00d2ff]/5 h-12 px-8 text-lg">
               <Link href="https://github.com/claybowl/Know-Defeat" target="_blank">

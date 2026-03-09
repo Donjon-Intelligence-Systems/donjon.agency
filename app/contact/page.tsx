@@ -233,7 +233,7 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="bg-[#FF7F00] hover:bg-[#FF7F00]/90 text-white" asChild>
-                <Link href="/consultation">Schedule a Consultation</Link>
+                <Link href="/consulting">Schedule a Consultation</Link>
               </Button>
               <Button
                 size="lg"

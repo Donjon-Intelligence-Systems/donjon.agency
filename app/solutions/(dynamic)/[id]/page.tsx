@@ -193,7 +193,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
                   Schedule a demo to see how {toolName} can transform your business operations.
                 </p>
                 <Button asChild className="w-full bg-[#0076FF] hover:bg-[#0076FF]/90 text-white mb-4">
-                  <Link href="/consultation">Schedule a Demo</Link>
+                  <Link href="/consulting">Schedule a Demo</Link>
                 </Button>
                 <Button asChild variant="outline" className="w-full">
                   <Link href="/assessments/new">Take the AI Readiness Assessment</Link>

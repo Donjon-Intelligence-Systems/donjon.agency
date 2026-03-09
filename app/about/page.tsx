@@ -432,7 +432,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="bg-sky-500 hover:bg-sky-400 text-white" asChild>
-                <Link href="/consultation">
+                <Link href="/consulting">
                   Schedule a Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

@@ -806,7 +806,7 @@ export default function DocumentationPage() {
                 <Link href="/products">View Products</Link>
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20" asChild>
-                <Link href="/consultation">
+                <Link href="/consulting">
                   Schedule Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>

@@ -9,34 +9,44 @@ export function ConsultationFAQ() {
 
   const faqs = [
     {
-      question: "What happens during the initial consultation?",
+      question: "What exactly is an AI agent system?",
       answer:
-        "During the initial consultation, our team will discuss your business goals, challenges, and current technology infrastructure. We'll ask questions to understand your specific needs and explain how our AI solutions can address them. This session typically lasts 45-60 minutes and can be conducted virtually or in person.",
+        "AI agents are autonomous systems that can perceive their environment, make decisions, and take actions to achieve specific goals. Unlike traditional automation that follows rigid rules, agents use memory (via Letta) to remember context across conversations, adapt their behavior based on feedback, and handle complex, multi-step workflows. Think of them as digital workers that can research, analyze, communicate, and execute tasks independently.",
     },
     {
-      question: "Is there a fee for the initial consultation?",
+      question: "What's the difference between agents and regular automation?",
       answer:
-        "No, the initial consultation is complimentary. We believe in providing value upfront and helping you understand how our solutions can benefit your business before any commitment is made.",
+        "Traditional automation (like Zapier) follows linear if-then rules and moves data between apps. AI agents are different: they have memory (they remember past interactions), they can reason through complex problems, they adapt based on context, and they can handle exceptions without breaking. Agents don't just move data—they make decisions, learn from outcomes, and improve over time.",
     },
     {
-      question: "How do I prepare for the consultation?",
+      question: "How does the OpenClaw framework fit in?",
       answer:
-        "To make the most of your consultation, we recommend having a clear idea of your business challenges and goals. Consider what processes you'd like to improve, what data you currently collect, and any specific outcomes you're hoping to achieve. Having key stakeholders present during the consultation is also beneficial.",
+        "OpenClaw is an open-source agent framework that provides the foundation for building autonomous systems. It handles agent orchestration, tool integration, memory management (via Letta), and multi-step reasoning. We use OpenClaw because it's transparent, customizable, and doesn't lock you into proprietary platforms. You own the code, the agents, and the data.",
     },
     {
-      question: "What happens after the consultation?",
+      question: "What happens during the agent systems consultation?",
       answer:
-        "Following the consultation, our team will develop a tailored proposal based on your needs. This proposal will include recommended solutions, implementation timeline, and investment details. We'll schedule a follow-up meeting to present this proposal and answer any questions you may have.",
+        "We start by mapping your current workflows and identifying tasks that consume human time but don't require human judgment. Then we design an agent architecture using OpenClaw and Letta memory systems. We discuss integration points (your existing CRM, email, databases), security requirements, and deployment options. You'll leave with a clear roadmap for implementation.",
     },
     {
-      question: "How long does the entire consultation process take?",
+      question: "How long does it take to build and deploy an agent system?",
       answer:
-        "The consultation framework typically spans 4-5 weeks from initial discovery to proposal presentation. However, this timeline can be adjusted based on the complexity of your needs and the availability of key stakeholders for interviews and feedback sessions.",
+        "Most initial agent systems are live in 2-4 weeks. Simple automations (single-task agents) can be deployed in days. Complex multi-agent systems with deep integrations take 6-8 weeks. We scope everything upfront so there are no surprises, and you see progress weekly throughout the build.",
     },
     {
-      question: "Do you offer consultations for specific industries?",
+      question: "Do I need technical expertise to manage the agents?",
       answer:
-        "Yes, we have experience working with businesses across various industries including finance, healthcare, manufacturing, retail, and more. Our team includes industry specialists who understand the unique challenges and opportunities in different sectors.",
+        "No. We design for operators, not developers. You get a dashboard to monitor agent activity, training documentation written for humans, and 30-day support. Most clients run their agent systems without ongoing technical help. If you want changes later, you own the system and can either make them yourself or engage us for updates.",
+    },
+    {
+      question: "What about data security and privacy?",
+      answer:
+        "Security is built in from day one. We prioritize self-hosted deployments where your data never leaves your infrastructure. For cloud deployments, we use private instances (not shared APIs) with encrypted connections. Agents can be configured to work entirely offline for sensitive data. You control where data lives, who has access, and what the agents can do.",
+    },
+    {
+      question: "Can agents integrate with our existing tools?",
+      answer:
+        "Absolutely. We connect agents to CRMs (Salesforce, HubSpot), communication platforms (Slack, email), databases (PostgreSQL, Supabase), APIs, and even legacy systems. If it has an interface—web, API, or desktop—we can integrate it. Common integrations include Notion, Google Workspace, Stripe, Twilio, and custom internal systems.",
     },
   ]
 

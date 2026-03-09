@@ -316,12 +316,17 @@ export default function ServicesPage() {
             <h2 className="text-xl md:text-2xl font-bold text-slate-50 mb-3">Ready to automate YOUR business?</h2>
             <p className="text-sm text-slate-400 mb-6 max-w-sm mx-auto">Book 15 minutes. No pressure, no pitch — just a conversation.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Button size="lg" className="bg-sky-500 hover:bg-sky-400 text-black font-semibold" asChild>
-                <Link href="/consultation">Book Free Chat <ArrowRight className="ml-2 h-4 w-4" /></Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-slate-600 text-slate-300 hover:bg-white/5 hover:text-white" asChild>
-                <Link href="/contact">Contact Us</Link>
-              </Button>
+            <Button size="lg" className="bg-sky-500 hover:bg-sky-400 text-black font-semibold" asChild>
+              <Link href="/consultation" className="flex items-center">
+                <span>Book Free Chat</span>
+                <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="border-slate-600 text-slate-300 hover:bg-white/5 hover:text-white" asChild>
+              <Link href="/contact" className="flex items-center">
+                <span>Contact Us</span>
+              </Link>
+            </Button>
             </div>
           </div>
         </div>

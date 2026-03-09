@@ -90,7 +90,7 @@ export function DashboardHero({
             className="text-slate-400 hover:bg-white/5"
             asChild
           >
-            <a href="/consultation">
+            <a href="/consulting">
               <Calendar className="mr-2 h-4 w-4" />
               Book Consultation
             </a>

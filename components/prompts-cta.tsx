@@ -13,7 +13,7 @@ export function PromptsCTA() {
             consultation to discuss your requirements.
           </p>
           <Button asChild className="bg-[#0076FF] hover:bg-[#0076FF]/90 text-white">
-            <Link href="/consultation">Schedule a Consultation</Link>
+            <Link href="/consulting">Schedule a Consultation</Link>
           </Button>
         </div>
       </div>

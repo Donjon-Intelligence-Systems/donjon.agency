@@ -270,7 +270,7 @@ export function MainNav() {
               className="bg-sky-500 hover:bg-sky-400 text-black font-bold transition-all duration-300"
               asChild
             >
-              <Link href="/consultation">
+              <Link href="/consulting">
                 Schedule Consultation
               </Link>
             </Button>
@@ -408,7 +408,7 @@ export function MainNav() {
                 asChild
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Link href="/consultation">
+                <Link href="/consulting">
                   Schedule Consultation
                 </Link>
               </Button>

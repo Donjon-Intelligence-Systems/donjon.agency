@@ -1,0 +1,341 @@
+
+> donjon-intelligence-systems@0.1.0 dev
+> node --max-old-space-size=8192 node_modules/next/dist/bin/next dev
+
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/clay/package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/clay/Documents/Github/donjon.agency/package-lock.json
+
+ ⚠ Port 3000 is in use by process 11190, using available port 3001 instead.
+   ▲ Next.js 15.5.12
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.0.152:3001
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.8s
+ ○ Compiling / ...
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ Compiled / in 3s (1092 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ ✓ Compiled in 1534ms (431 modules)
+ GET / 200 in 4872ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 1304ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 966ms
+ ✓ Compiled in 1407ms (1092 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 575ms
+ ✓ Compiled in 644ms (1092 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 455ms
+ ○ Compiling /consultation ...
+ ✓ Compiled /consultation in 584ms (1124 modules)
+ GET /consultation/ 200 in 749ms
+ ✓ Compiled /consulting in 408ms (1131 modules)
+ GET /consulting/ 200 in 821ms
+ GET /consulting/ 200 in 76ms
+ GET /consultation/ 200 in 69ms
+ ○ Compiling /consultation/room/[id] ...
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+Error getting current user: [Error [AuthSessionMissingError]: Auth session missing!] {
+  __isAuthError: true,
+  status: 400,
+  code: undefined
+}
+ GET /consultation/room/demo/ 200 in 11678ms
+Error getting current user: [Error [AuthSessionMissingError]: Auth session missing!] {
+  __isAuthError: true,
+  status: 400,
+  code: undefined
+}
+ GET /consultation/room/demo/ 200 in 86ms
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ GET /login/?redirect=%2Fconsultation%2Froom 200 in 4145ms
+ GET /login/?redirect=%2Fconsultation%2Froom 200 in 28ms
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+Error fetching local milestones: TypeError: Cannot read properties of undefined (reading 'map')
+    at getLocalMilestones (app/actions/roadmap-actions.ts:140:36)
+    at async getRoadmapMilestones (app/actions/roadmap-actions.ts:177:23)
+    at async RoadmapPage (app/roadmap/page.tsx:15:43)
+  138 |     `)
+  139 |
+> 140 |     const milestones = result.rows.map((row: any) => ({
+      |                                    ^
+  141 |       id: row.id,
+  142 |       title: row.title,
+  143 |       description: row.description || "",
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ GET /roadmap/ 200 in 4775ms
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ GET /knowledge-vault/ 200 in 1314ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 317ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 259ms
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ ✓ Compiled /_not-found in 1002ms (2307 modules)
+ GET /assessment/ 404 in 1310ms
+ GET /assessment/ 404 in 261ms
+ ○ Compiling /services ...
+ ✓ Compiled /services in 1037ms (2342 modules)
+ GET /services/ 200 in 1135ms
+ GET /consulting/ 200 in 98ms
+ ○ Compiling /consultation/room/[id] ...
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+Error getting current user: [Error [AuthSessionMissingError]: Auth session missing!] {
+  __isAuthError: true,
+  status: 400,
+  code: undefined
+}
+ GET /consultation/room/demo/ 200 in 2135ms
+ GET /login/?redirect=%2Fconsultation%2Froom 200 in 59ms
+ GET /login/?redirect=%2Fconsultation%2Froom 200 in 60ms
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ GET /signup/ 200 in 2355ms
+ GET /signup/ 200 in 35ms
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 2137ms
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 663ms
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ ✓ Compiled /consultation in 1387ms (743 modules)
+ GET /consultation/ 200 in 1651ms
+ ○ Compiling /consulting ...
+ ✓ Compiled /consulting in 1925ms (740 modules)
+ GET /consulting/ 200 in 2040ms
+ GET /consultation/ 200 in 69ms
+ GET /services/ 200 in 82ms
+ GET /services/ 200 in 25ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 252ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 231ms
+ GET /knowledge-vault/ 200 in 82ms
+ GET /consulting/ 200 in 48ms
+ GET /consultation/ 200 in 60ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 343ms
+ GET /consulting/ 200 in 59ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 310ms
+ ✓ Compiled in 2.6s (2345 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 411ms
+ ✓ Compiled in 1796ms (2334 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 1365ms
+ GET / 200 in 1111ms
+ GET /services/ 200 in 127ms
+ ✓ Compiled in 1622ms (2348 modules)
+ GET /consulting/ 200 in 969ms
+ GET /consulting/ 200 in 58ms
+ GET /consulting/ 200 in 738ms
+ GET /consulting/ 200 in 196ms
+ ✓ Compiled in 1891ms (2348 modules)
+ GET /consulting/ 200 in 140ms
+ GET /consulting/ 200 in 85ms
+ ○ Compiling /consultation/room/[id] ...
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+Error getting current user: [Error [AuthSessionMissingError]: Auth session missing!] {
+  __isAuthError: true,
+  status: 400,
+  code: undefined
+}
+ GET /consultation/room/demo/ 200 in 3848ms
+Error getting current user: [Error [AuthSessionMissingError]: Auth session missing!] {
+  __isAuthError: true,
+  status: 400,
+  code: undefined
+}
+ GET /consultation/room/demo/ 200 in 50ms
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ ⚠ ./node_modules/e2b/dist/index.mjs
+Critical dependency: the request of a dependency is an expression
+
+Import trace for requested module:
+./node_modules/e2b/dist/index.mjs
+./node_modules/@e2b/code-interpreter/dist/index.mjs
+./lib/e2b-client.ts
+./app/actions/sandbox-actions.ts
+ GET /login/?redirect=%2Fconsultation%2Froom 200 in 431ms
+ GET /login/?redirect=%2Fconsultation%2Froom 200 in 21ms
+ GET /login/?redirect=/consultation/room 200 in 242ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 631ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 239ms
+ ✓ Compiled /login in 1446ms (2337 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 515ms
+ ✓ Compiled in 1516ms (2337 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 434ms
+ ✓ Compiled in 984ms (2337 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 1072ms
+ ✓ Compiled in 1839ms (2337 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 412ms
+ ✓ Compiled /services in 412ms (741 modules)
+ GET /services/ 200 in 515ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 292ms
+ ✓ Compiled in 3s (2327 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 318ms
+ ✓ Compiled in 799ms (2341 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 494ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 384ms
+ GET /consulting/ 200 in 108ms
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 221ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 1712ms (2337 modules)
+ GET /about/ 200 in 1951ms
+ GET /about/ 200 in 41ms
+ ✓ Compiled in 1413ms (2299 modules)
+ GET /about/ 200 in 306ms
+ ✓ Compiled in 435ms (1614 modules)
+ GET /about/ 200 in 57ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1184ms (737 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 1756ms
+ GET / 200 in 219ms

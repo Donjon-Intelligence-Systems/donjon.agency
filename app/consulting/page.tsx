@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle2, Code2, Database, Zap, Workflow, Terminal, GitBranch, Rocket, Users, Clock } from "lucide-react"
+import { ConsultationProcess } from "@/components/consultation-process"
+import { ConsultationFAQ } from "@/components/consultation-faq"
 
 export const metadata: Metadata = {
   title: "Consulting Services | Donjon Systems",
@@ -79,7 +81,7 @@ export default function ConsultingPage() {
                 className="bg-sky-500 hover:bg-sky-400 text-black font-bold transition-all duration-300"
                 asChild
               >
-                <Link href="/consultation">Book Consultation</Link>
+                <Link href="/consulting">Book Consultation</Link>
               </Button>
               <Button
                 variant="outline"
@@ -117,7 +119,7 @@ export default function ConsultingPage() {
               className="bg-sky-500 hover:bg-sky-400 text-black font-bold text-lg px-8 py-6 h-auto transition-all duration-300 shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 group-hover:scale-105"
               asChild
             >
-              <Link href="/consultation">
+              <Link href="/consulting">
                 <span className="flex items-center gap-2">
                   Open Consultation Hub
                   <Rocket className="h-5 w-5" />
@@ -146,7 +148,7 @@ export default function ConsultingPage() {
                 className="text-slate-400 hover:text-sky-400 hover:bg-sky-500/10"
                 asChild
               >
-                <Link href="/consultation/room/demo">
+                <Link href="/consulting/room/demo">
                   <span className="flex items-center gap-2">
                     Try Demo Room
                     <Rocket className="h-4 w-4" />
@@ -261,39 +263,63 @@ export default function ConsultingPage() {
                   className="bg-sky-500 hover:bg-sky-400 text-black font-bold w-full"
                   asChild
                 >
-                  <Link href="/consultation">Schedule Your Free Consultation</Link>
+                  <Link href="/consulting">Schedule Your Free Consultation</Link>
                 </Button>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900/20 to-transparent">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold text-slate-50 mb-4">Ready to Get Started?</h2>
-          <p className="text-xl text-slate-400 mb-8">
-            Let's build something amazing together
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Button
-              size="lg"
-              className="bg-sky-500 hover:bg-sky-400 text-black font-bold"
-              asChild
-            >
-              <Link href="/consultation">Book Consultation</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-sky-500/50 text-sky-400 hover:bg-sky-500/10"
-              asChild
-            >
-              <Link href="/contact">Contact Me</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
-  )
+  </section>
+
+  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
+    <div className="container mx-auto max-w-6xl">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-slate-50 mb-4">Our Agent Systems Framework</h2>
+        <p className="text-slate-400 max-w-2xl mx-auto">
+          A structured approach to building AI agents with persistent memory, autonomous capabilities, and real business impact.
+        </p>
+      </div>
+      <ConsultationProcess />
+    </div>
+  </section>
+
+  <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto max-w-4xl">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-slate-50 mb-4">Frequently Asked Questions</h2>
+        <p className="text-slate-400">
+          Everything you need to know about building agent systems
+        </p>
+      </div>
+      <ConsultationFAQ />
+    </div>
+  </section>
+
+  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900/20 to-transparent">
+    <div className="container mx-auto max-w-4xl text-center">
+      <h2 className="text-3xl font-bold text-slate-50 mb-4">Ready to Build Your Agent System?</h2>
+      <p className="text-xl text-slate-400 mb-8">
+        Let's discuss how autonomous agents can transform your business operations
+      </p>
+      <div className="flex gap-4 justify-center flex-wrap">
+        <Button
+          size="lg"
+          className="bg-sky-500 hover:bg-sky-400 text-black font-bold"
+          asChild
+        >
+          <Link href="/consulting">Book Free Consultation</Link>
+        </Button>
+        <Button
+          size="lg"
+          variant="outline"
+          className="border-sky-500/50 text-sky-400 hover:bg-sky-500/10"
+          asChild
+        >
+          <Link href="/contact">Contact Me</Link>
+        </Button>
+      </div>
+    </div>
+  </section>
+</div>
+)
 }
