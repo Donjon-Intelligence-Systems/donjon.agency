@@ -61,16 +61,16 @@ export function ConsultationCenter({
           <Users className="h-6 w-6 text-indigo-400" />
           <h2 className="text-2xl font-bold text-slate-50">Consultations</h2>
         </div>
-        <Button 
-          className="bg-indigo-500 hover:bg-indigo-400 text-white font-bold"
-          size="sm"
-          asChild
-        >
-          <a href="/consulting">
-            <Calendar className="mr-2 h-4 w-4" />
-            Book Consultation
-          </a>
-        </Button>
+<Button
+className="bg-indigo-500 hover:bg-indigo-400 text-white font-bold"
+size="sm"
+asChild
+>
+<a href="https://cal.com/clayton-c" target="_blank" rel="noopener noreferrer">
+<Calendar className="mr-2 h-4 w-4" />
+Book Consultation
+</a>
+</Button>
       </div>
 
       <div className="neon-line mb-8" />
@@ -133,16 +133,16 @@ export function ConsultationCenter({
           <p className="text-slate-400 mb-6 max-w-md">
             Book a consultation with our AI experts to discuss your strategy, implementation, or specific challenges.
           </p>
-          <Button 
-            className="bg-indigo-500 hover:bg-indigo-400 text-white font-bold"
-            asChild
-          >
-            <a href="/consulting">
-              <Calendar className="mr-2 h-4 w-4" />
-              Schedule Consultation
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
+<Button
+className="bg-indigo-500 hover:bg-indigo-400 text-white font-bold"
+asChild
+>
+<a href="https://cal.com/clayton-c" target="_blank" rel="noopener noreferrer">
+<Calendar className="mr-2 h-4 w-4" />
+Schedule Consultation
+<ArrowRight className="ml-2 h-4 w-4" />
+</a>
+</Button>
         </div>
       )}
     </div>

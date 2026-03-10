@@ -385,3 +385,177 @@ Each child in a list should have a unique "key" prop. See https://react.dev/link
  ✓ Compiled in 1611ms (2345 modules)
  ✓ Compiled in 208ms (1614 modules)
  ✓ Compiled in 790ms (2345 modules)
+ ✓ Compiled in 803ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 2292ms
+ ✓ Compiled in 1165ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ ✓ Compiled in 438ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 694ms
+ GET / 200 in 266ms
+ ✓ Compiled in 1102ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 317ms
+ ✓ Compiled in 1211ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 413ms
+ ✓ Compiled in 477ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 356ms
+ ✓ Compiled in 204ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 294ms
+ ✓ Compiled in 346ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 1005ms
+ ✓ Compiled in 199ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 298ms
+ ✓ Compiled in 197ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 331ms
+ ✓ Compiled in 1132ms (1614 modules)
+Each child in a list should have a unique "key" prop. See https://react.dev/link/warning-keys for more information.
+ GET / 200 in 419ms
+ ✓ Compiled in 1467ms (2331 modules)
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2s (2676 modules)
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ ✓ Compiled in 501ms (1764 modules)
+ ✓ Compiled in 3.5s (2676 modules)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ ✓ Compiled in 1715ms (2676 modules)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ GET / 500 in 9031ms
+ GET / 500 in 1751ms
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ GET / 500 in 1175ms
+ GET / 500 in 340ms
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ GET / 500 in 1378ms
+ GET / 500 in 297ms
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ GET / 500 in 931ms
+ GET / 500 in 268ms
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ GET / 500 in 899ms
+ GET / 500 in 262ms
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ GET / 500 in 872ms
+ GET / 500 in 257ms
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ GET / 500 in 876ms
+ GET / 500 in 281ms
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/'
+}
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+ GET / 500 in 930ms
+ GET / 500 in 269ms
+ ✓ Compiled in 1498ms (2580 modules)
+ ✓ Compiled in 2.7s (2599 modules)
+ ✓ Compiled in 1392ms (2599 modules)
+ ✓ Compiled in 422ms (1772 modules)
+ ✓ Compiled in 1515ms (2599 modules)
+ ✓ Compiled in 434ms (1772 modules)
+[?25h

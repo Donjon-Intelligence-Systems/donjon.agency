@@ -1,10 +1,11 @@
 import Link from "next/link"
-import { ArrowRight, Sparkles, Calendar, ExternalLink, Beaker, Wrench, Users, Rocket, MessageSquare, Shield, Check, X, Zap, Target, Lock, Bot, Headphones, CalendarDays, Mail, Search, MapPin, Calculator, BarChart3, FileCheck, Timer, HelpCircle, Database, Server, Brain, Cpu, Cloud, Code, Terminal, Container, Workflow, Shell, Heart, Flame, Box, Laptop, GitBranch, Hexagon, FileCode, Layers, Triangle, Hash, MessageCircle, FileText } from "lucide-react"
+import { ArrowRight, Sparkles, Calendar, ExternalLink, Beaker, Wrench, Users, Rocket, MessageSquare, Shield, Check, X, Zap, Target, Lock, Bot, Headphones, CalendarDays, Mail, Search, MapPin, Calculator, BarChart3, FileCheck, Timer, HelpCircle, Shell } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { BrandIcon, brandIcons } from "@/components/donjon/brand-icon"
 
 const platforms = [
   {
@@ -145,77 +146,42 @@ const tools = [
   { name: "Support Ticket Deflection", description: "How much of your support volume could AI handle?", icon: Headphones },
   { name: "Data Readiness Checklist", description: "Is your data ready for AI? Scored assessment with improvement roadmap.", icon: FileCheck },
   { name: "Lead Response Speed Calculator", description: "Calculate revenue lost to slow response times.", icon: Timer },
-  { name: "AI Readiness Audit", description: "Comprehensive 10-minute assessment with custom report.", icon: BarChart3 },
-]
-
-const faqs = [
-  {
-    question: "Do I need a technical team to manage this?",
-    answer: "No. We design for operators, not developers. You get training, documentation, and 30-day support. Most clients run their systems without ongoing technical help.",
-  },
-  {
-    question: "How long does a build take?",
-    answer: "Most initial systems go live in 2–4 weeks. Complex integrations might take 6–8 weeks. We scope everything upfront so there are no surprises.",
-  },
-  {
-    question: "What if it breaks after handoff?",
-    answer: "You own the system, so you control it. We provide full documentation. Optional maintenance retainers include priority response and proactive updates.",
-  },
-  {
-    question: "Is my data safe?",
-    answer: "Yes. We prioritize self-hosted or private cloud deployments. Your data stays on your infrastructure unless you explicitly choose otherwise.",
-  },
-  {
-    question: "How much does this cost?",
-    answer: "Consulting starts at $85/hour. Platform implementations range from $3K–$15K depending on scope. We provide fixed quotes after discovery—no open-ended billing.",
-  },
-  {
-    question: "Can this replace my support/sales team?",
-    answer: "AI amplifies your team—it doesn't replace judgment. We typically see 30–70% deflection on routine tasks, freeing your people for complex work.",
-  },
-  {
-    question: "What if I want changes after launch?",
-    answer: "You own the system. Make changes yourself, or engage us for updates. Many clients start with a retainer for ongoing optimization.",
-  },
-  {
-    question: "Do you work outside Tulsa?",
-    answer: "Yes, but Tulsa businesses get priority and local support. Remote engagements work fine—we're built for distributed collaboration.",
-  },
+{ name: "AI Readiness Audit", description: "Comprehensive 10-minute assessment with custom report.", icon: BarChart3 },
 ]
 
 const techStack = [
-  { name: "OpenClaw", category: "Agent Framework", icon: Shell, color: "#FF6B35", featured: true, brandColor: "#FF6B35" },
-  { name: "Letta", category: "Memory & Agents", icon: Database, color: "indigo", featured: true, brandColor: "#faf9f5" },
-  { name: "OpenWork", category: "Agent Environment", icon: Laptop, color: "violet", brandColor: "#8B5CF6" },
-  { name: "OpenCode", category: "Agent IDE", icon: Code, color: "emerald", brandColor: "#000000" },
-  { name: "OpenAI", category: "Models", icon: Brain, color: "emerald", brandColor: "#10A37F" },
-  { name: "Anthropic", category: "Models", icon: Bot, color: "violet", brandColor: "#d97757" },
-  { name: "Ollama", category: "Local Models", icon: Cpu, color: "amber", brandColor: "#8B5CF6" },
-  { name: "LM Studio", category: "Local Runtime", icon: Box, color: "orange", brandColor: "#3B82F6" },
-  { name: "Llama", category: "Local Models", icon: Server, color: "sky", brandColor: "#3B82F6" },
-  { name: "Cursor", category: "AI Editor", icon: FileCode, color: "blue", brandColor: "#000000" },
-  { name: "Warp", category: "Terminal", icon: Zap, color: "orange", brandColor: "#7C3AED" },
-  { name: "Docker", category: "Containers", icon: Container, color: "sky", brandColor: "#1D63ED" },
-  { name: "Git", category: "Version Control", icon: GitBranch, color: "red", brandColor: "#F05032" },
-  { name: "PostgreSQL", category: "Database", icon: Database, color: "indigo", brandColor: "#336791" },
-  { name: "Neon", category: "Postgres", icon: Cloud, color: "cyan", brandColor: "#3DFFFF" },
-  { name: "Redis", category: "Cache", icon: Database, color: "red", brandColor: "#D82C20" },
-  { name: "Supabase", category: "Backend", icon: Cloud, color: "emerald", brandColor: "#34B27B" },
-  { name: "Vercel", category: "Hosting", icon: Triangle, color: "slate", brandColor: "#0070F3" },
-  { name: "Notion", category: "Knowledge", icon: FileText, color: "slate", brandColor: "#000000" },
-  { name: "Miro", category: "Whiteboard", icon: Layers, color: "yellow", brandColor: "#FFD02F" },
-  { name: "n8n", category: "Automation", icon: Workflow, color: "violet", brandColor: "#EA4B71" },
-  { name: "E2B", category: "Sandbox", icon: Box, color: "slate", brandColor: "#6366F1" },
-  { name: "Pi", category: "Infra AI", icon: Hexagon, color: "pink", brandColor: "#EC4899" },
-  { name: "Koala", category: "Analytics", icon: Heart, color: "rose", brandColor: "#F43F5E" },
-  { name: "Next.js", category: "Frontend", icon: Code, color: "slate", brandColor: "#000000" },
-  { name: "React", category: "UI", icon: Layers, color: "sky", brandColor: "#61DAFB" },
-  { name: "TypeScript", category: "Language", icon: Terminal, color: "sky", brandColor: "#3178C6" },
-  { name: "Node.js", category: "Runtime", icon: Server, color: "green", brandColor: "#339933" },
-  { name: "Python", category: "Language", icon: Terminal, color: "yellow", brandColor: "#306998" },
-  { name: "Slack", category: "Chat", icon: MessageCircle, color: "violet", brandColor: "#4A154B" },
-  { name: "Discord", category: "Community", icon: MessageCircle, color: "indigo", brandColor: "#5865F2" },
-  { name: "Cal.com", category: "Scheduling", icon: Calendar, color: "emerald", brandColor: "#141414" },
+{ name: "OpenClaw", category: "Agent Framework", featured: true },
+{ name: "Letta", category: "Memory & Agents", featured: true },
+{ name: "OpenWork", category: "Agent Environment" },
+{ name: "OpenCode", category: "Agent IDE" },
+{ name: "OpenAI", category: "Models" },
+{ name: "Anthropic", category: "Models" },
+{ name: "Ollama", category: "Local Models" },
+{ name: "LM Studio", category: "Local Runtime" },
+{ name: "Llama", category: "Local Models" },
+{ name: "Cursor", category: "AI Editor" },
+{ name: "Warp", category: "Terminal" },
+{ name: "Docker", category: "Containers" },
+{ name: "Git", category: "Version Control" },
+{ name: "PostgreSQL", category: "Database" },
+{ name: "Neon", category: "Postgres" },
+{ name: "Redis", category: "Cache" },
+{ name: "Supabase", category: "Backend" },
+{ name: "Vercel", category: "Hosting" },
+{ name: "Notion", category: "Knowledge" },
+{ name: "Miro", category: "Whiteboard" },
+{ name: "n8n", category: "Automation" },
+{ name: "E2B", category: "Sandbox" },
+{ name: "Pi", category: "Infra AI" },
+{ name: "Koala", category: "Analytics" },
+{ name: "Next.js", category: "Frontend" },
+{ name: "React", category: "UI" },
+{ name: "TypeScript", category: "Language" },
+{ name: "Node.js", category: "Runtime" },
+{ name: "Python", category: "Language" },
+{ name: "Slack", category: "Chat" },
+{ name: "Discord", category: "Community" },
+{ name: "Cal.com", category: "Scheduling" },
 ]
 
 export default function Home() {
@@ -347,63 +313,69 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative mb-6">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#030712] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#030712] to-transparent z-10 pointer-events-none" />
-          <div className="flex gap-6 animate-scroll" style={{ width: 'fit-content' }}>
-            {[...techStack, ...techStack, ...techStack, ...techStack].map((tech, i) => (
-              <div
-                key={`row1-${i}`}
-                className={`glass-panel px-6 py-4 flex items-center gap-3 hover:border-sky-500/30 transition-colors cursor-pointer group min-w-[180px] ${tech.featured ? 'border-sky-500/50 bg-sky-500/5' : ''}`}
-              >
-                <div 
-                  className={`h-10 w-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform ${tech.featured ? 'ring-2 ring-sky-500/30' : ''}`}
-                  style={{ backgroundColor: `${tech.brandColor}15` }}
-                >
-                  <tech.icon className="h-5 w-5" style={{ color: tech.brandColor }} />
-                </div>
-                <div>
-                  <div 
-                    className={`font-medium text-sm ${tech.featured ? 'text-sky-400' : 'text-slate-200'}`}
-                    style={tech.featured ? {} : { color: tech.brandColor }}
-                  >
-                    {tech.name}
-                  </div>
-                  <div className="text-slate-500 text-xs">{tech.category}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+<div className="relative mb-6">
+<div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#030712] to-transparent z-10 pointer-events-none" />
+<div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#030712] to-transparent z-10 pointer-events-none" />
+<div className="flex gap-6 animate-scroll" style={{ width: 'fit-content' }}>
+{[...techStack, ...techStack, ...techStack, ...techStack].map((tech, i) => {
+const brandData = brandIcons[tech.name]
+return (
+<div
+key={`row1-${i}`}
+className={`glass-panel px-6 py-4 flex items-center gap-3 hover:border-sky-500/30 transition-colors cursor-pointer group min-w-[180px] ${tech.featured ? 'border-sky-500/50 bg-sky-500/5' : ''}`}
+>
+<div
+className={`h-10 w-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform ${tech.featured ? 'ring-2 ring-sky-500/30' : ''}`}
+style={{ backgroundColor: `${brandData?.color}15` }}
+>
+<BrandIcon name={tech.name} size={20} />
+</div>
+<div>
+<div
+className={`font-medium text-sm ${tech.featured ? 'text-sky-400' : 'text-slate-200'}`}
+style={tech.featured ? {} : { color: brandData?.color }}
+>
+{tech.name}
+</div>
+<div className="text-slate-500 text-xs">{tech.category}</div>
+</div>
+</div>
+)
+})}
+</div>
+</div>
 
-        <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#030712] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#030712] to-transparent z-10 pointer-events-none" />
-          <div className="flex gap-6 animate-scroll-reverse" style={{ width: 'fit-content' }}>
-            {[...techStack.slice(15), ...techStack.slice(0, 15), ...techStack.slice(15), ...techStack.slice(0, 15)].map((tech, i) => (
-              <div
-                key={`row2-${i}`}
-                className={`glass-panel px-6 py-4 flex items-center gap-3 hover:border-indigo-500/30 transition-colors cursor-pointer group min-w-[180px] ${tech.featured ? 'border-sky-500/50 bg-sky-500/5' : ''}`}
-              >
-                <div 
-                  className={`h-10 w-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform ${tech.featured ? 'ring-2 ring-sky-500/30' : ''}`}
-                  style={{ backgroundColor: `${tech.brandColor}15` }}
-                >
-                  <tech.icon className="h-5 w-5" style={{ color: tech.brandColor }} />
-                </div>
-                <div>
-                  <div 
-                    className={`font-medium text-sm ${tech.featured ? 'text-sky-400' : 'text-slate-200'}`}
-                    style={tech.featured ? {} : { color: tech.brandColor }}
-                  >
-                    {tech.name}
-                  </div>
-                  <div className="text-slate-500 text-xs">{tech.category}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+<div className="relative">
+<div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#030712] to-transparent z-10 pointer-events-none" />
+<div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#030712] to-transparent z-10 pointer-events-none" />
+<div className="flex gap-6 animate-scroll-reverse" style={{ width: 'fit-content' }}>
+{[...techStack.slice(15), ...techStack.slice(0, 15), ...techStack.slice(15), ...techStack.slice(0, 15)].map((tech, i) => {
+const brandData = brandIcons[tech.name]
+return (
+<div
+key={`row2-${i}`}
+className={`glass-panel px-6 py-4 flex items-center gap-3 hover:border-indigo-500/30 transition-colors cursor-pointer group min-w-[180px] ${tech.featured ? 'border-sky-500/50 bg-sky-500/5' : ''}`}
+>
+<div
+className={`h-10 w-10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform ${tech.featured ? 'ring-2 ring-sky-500/30' : ''}`}
+style={{ backgroundColor: `${brandData?.color}15` }}
+>
+<BrandIcon name={tech.name} size={20} />
+</div>
+<div>
+<div
+className={`font-medium text-sm ${tech.featured ? 'text-sky-400' : 'text-slate-200'}`}
+style={tech.featured ? {} : { color: brandData?.color }}
+>
+{tech.name}
+</div>
+<div className="text-slate-500 text-xs">{tech.category}</div>
+</div>
+</div>
+)
+})}
+</div>
+</div>
 
         <div className="max-w-4xl mx-auto mt-12 text-center">
           <div className="glass-panel p-6 border-sky-500/20">
@@ -780,28 +752,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-slate-900/20">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-light text-white mb-4">Common Questions</h2>
-          </div>
-
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="glass-panel border-white/10 px-6">
-                <AccordionTrigger className="text-slate-200 hover:text-sky-400 text-left py-4">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-400 pb-4">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      <section className="py-20 px-6">
+<section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-slate-50 mb-4">Ready to Stop Wrestling with Manual Work?</h2>
           <p className="text-xl text-slate-400 mb-8">
@@ -827,31 +778,31 @@ export default function Home() {
       <section className="py-20 px-6 bg-slate-900/20 border-t border-white/5">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/consulting" className="glass-panel p-8 border-white/10 hover:border-sky-500/30 transition-all duration-300 group">
-              <div className="h-14 w-14 rounded-xl bg-sky-500/10 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
-                <Users className="h-7 w-7 text-sky-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-slate-50 mb-3">Consulting</h3>
-              <p className="text-slate-400 mb-4">
-                Expert guidance at $85/hr. Platform development, AI integration, workflow automation.
-              </p>
-              <span className="text-sky-400 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
-                Learn More <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
+<Link href="/consulting" className="glass-panel p-8 border-white/10 hover:border-sky-500/30 transition-all duration-300 group">
+<div className="h-14 w-14 rounded-xl bg-sky-500/10 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+<Users className="h-7 w-7 text-sky-400" />
+</div>
+<h3 className="text-xl font-semibold text-slate-50 mb-3">Consulting</h3>
+<p className="text-slate-400 mb-4">
+AI chatbots from $497, booking automation from $697. First-time clients: $85/hr. Done in 24 hours.
+</p>
+<span className="text-sky-400 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+Learn More <ArrowRight className="h-4 w-4" />
+</span>
+</Link>
 
-            <Link href="/services" className="glass-panel p-8 border-white/10 hover:border-emerald-500/30 transition-all duration-300 group">
-              <div className="h-14 w-14 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
-                <Wrench className="h-7 w-7 text-emerald-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-slate-50 mb-3">Services</h3>
-              <p className="text-slate-400 mb-4">
-                Pre-built workflow templates, a la carte development, and custom enterprise solutions.
-              </p>
-              <span className="text-emerald-400 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
-                View Services <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
+<Link href="/services" className="glass-panel p-8 border-white/10 hover:border-emerald-500/30 transition-all duration-300 group">
+<div className="h-14 w-14 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+<Wrench className="h-7 w-7 text-emerald-400" />
+</div>
+<h3 className="text-xl font-semibold text-slate-50 mb-3">Services</h3>
+<p className="text-slate-400 mb-4">
+Full-stack development, AI platforms, custom automation systems, and enterprise solutions.
+</p>
+<span className="text-emerald-400 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+View Services <ArrowRight className="h-4 w-4" />
+</span>
+</Link>
 
             <Link href="/labs" className="glass-panel p-8 border-white/10 hover:border-violet-500/30 transition-all duration-300 group">
               <div className="h-14 w-14 rounded-xl bg-violet-500/10 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">

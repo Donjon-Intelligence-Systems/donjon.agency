@@ -231,19 +231,19 @@ export default function ContactPage() {
               If you're ready to dive deeper into how AI can transform your business, schedule a consultation with our
               expert team.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="bg-[#FF7F00] hover:bg-[#FF7F00]/90 text-white" asChild>
-                <Link href="/consulting">Schedule a Consultation</Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-[#0076FF] text-[#0076FF] hover:bg-[#0076FF]/10 dark:border-blue-400 dark:text-blue-400"
-                asChild
-              >
-                <Link href="/about">Learn More About Us</Link>
-              </Button>
-            </div>
+<div className="flex flex-col sm:flex-row justify-center gap-4">
+<Button size="lg" className="bg-[#FF7F00] hover:bg-[#FF7F00]/90 text-white" asChild>
+<a href="https://cal.com/clayton-c" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
+</Button>
+<Button
+size="lg"
+variant="outline"
+className="border-[#0076FF] text-[#0076FF] hover:bg-[#0076FF]/10 dark:border-blue-400 dark:text-blue-400"
+asChild
+>
+<Link href="/about">Learn More About Us</Link>
+</Button>
+</div>
           </div>
         </div>
       </section>

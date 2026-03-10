@@ -2,59 +2,85 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle2, Code2, Database, Zap, Workflow, Terminal, GitBranch, Rocket, Users, Clock } from "lucide-react"
+import { CheckCircle2, MessageSquare, Calendar, Sparkles, Zap, Terminal, Rocket, Users, Clock, Check } from "lucide-react"
 import { ConsultationProcess } from "@/components/consultation-process"
-import { ConsultationFAQ } from "@/components/consultation-faq"
 
 export const metadata: Metadata = {
-  title: "Consulting Services | Donjon Systems",
-  description: "Expert AI consulting, platform development, and workflow automation services.",
+  title: "AI Automation Services | Donjon Systems",
+  description: "AI chatbots, booking systems, and complete digital automation for Tulsa service businesses. Done in 24 hours.",
 }
 
-const services = [
+const packages = [
   {
-    icon: Code2,
-    title: "Platform Architecture & Development",
-    description: "Full-stack development of custom AI platforms, web applications, and automation systems using Next.js, Supabase, Neon PostgreSQL, and modern frontend frameworks.",
+    icon: MessageSquare,
+    title: "24-Hour AI Chatbot",
+    price: "$497",
+    description: "AI chatbot on your website that answers 10-15 common customer questions, captures leads with name/phone/service needed, and works 24/7 even when you're working.",
+    features: [
+      "Answers customer questions 24/7",
+      "Captures leads with contact info",
+      "Mobile-friendly interface",
+      "Works while you're on the job",
+      "Done in 24 hours",
+    ],
+    ideal: "Businesses with no website chat, solo operators missing calls",
+    color: "sky",
   },
   {
-    icon: Database,
-    title: "Database Design & Integration",
-    description: "Schema design, migration planning, and API integration for PostgreSQL and NoSQL databases with performance optimization and security best practices.",
+    icon: Calendar,
+    title: "Instant Booking System",
+    price: "$697",
+    description: "Everything in Package 1, PLUS online booking calendar that syncs to Google Calendar, SMS reminders to customers, and 'Book Now' buttons on your site and social.",
+    features: [
+      "Everything in Package 1",
+      "Online booking calendar",
+      "Syncs to Google Calendar",
+      "SMS reminders to customers",
+      "Simple intake form",
+      "'Book Now' button everywhere",
+    ],
+    ideal: "Service businesses taking bookings by phone only",
+    color: "emerald",
+    featured: true,
   },
   {
-    icon: Workflow,
-    title: "Workflow Automation",
-    description: "End-to-end automation using custom workflows and intelligent orchestration to streamline business processes and reduce manual overhead.",
-  },
-  {
-    icon: Terminal,
-    title: "Server-Side Engineering",
-    description: "Server actions, API development, and backend systems with TypeScript, Node.js, and enterprise-grade security patterns.",
-  },
-  {
-    icon: GitBranch,
-    title: "Mentorship & Code Review",
-    description: "Technical guidance for development teams, code reviews, architecture planning, and implementation best practices.",
+    icon: Sparkles,
+    title: "Complete Digital Overhaul",
+    price: "$1,297",
+    description: "Everything in Packages 1+2, PLUS Google Business Profile optimization, review request automation, simple 1-page website, email capture, and 30 days of support.",
+    features: [
+      "Everything in Packages 1 & 2",
+      "Google Business Profile optimization",
+      "Review request automation",
+      "Simple 1-page website",
+      "Email capture system",
+      "30 days of support",
+    ],
+    ideal: "Established businesses ready to scale, 2+ years old",
+    color: "violet",
   },
 ]
 
-const skills = [
+const consultingServices = [
   {
-    category: "Core Technologies",
-    items: ["Next.js 14/15", "TypeScript", "Supabase Auth", "Neon PostgreSQL", "Automation Workflows", "React 18+", "Tailwind CSS", "Zod Validation"],
+    title: "AI Readiness Audit",
+    price: "$500 - $1,000",
+    description: "Comprehensive assessment of your business's AI automation potential",
   },
   {
-    category: "Automation",
-    items: ["Workflow Orchestration", "Business Process Automation", "Third-party Integrations", "Smart Routing", "Custom Workflow Development"],
+    title: "Workflow Optimization",
+    price: "$300 - $500/hr",
+    description: "Streamline operations with custom AI-powered workflows",
   },
   {
-    category: "Backend & Infrastructure",
-    items: ["PostgreSQL & NoSQL", "REST & GraphQL APIs", "Server Actions", "Middleware & Security", "Performance Optimization"],
+    title: "Strategic Planning",
+    price: "$400/hr",
+    description: "Expert guidance on AI implementation strategy",
   },
   {
-    category: "Integration & Services",
-    items: ["Stripe Integration", "Vercel Deployment", "GitHub Actions CI/CD", "Third-party APIs", "Email & Notifications (SendGrid/Resend)"],
+    title: "Technology Stack Review",
+    price: "$600 - $1,200",
+    description: "Full analysis and recommendations for your tech infrastructure",
   },
 ]
 
@@ -66,67 +92,71 @@ export default function ConsultingPage() {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 mb-6">
-              <Terminal className="h-4 w-4 text-sky-400" />
-              <span className="text-sm font-mono text-sky-400">EXPERT CONSULTING</span>
+              <Zap className="h-4 w-4 text-sky-400" />
+              <span className="text-sm font-mono text-sky-400">DONE IN 24 HOURS</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-50 mb-6">
-              Strategic AI & Automation Consulting
+              Stop Missing Calls.<br />Start Making Money.
             </h1>
             <p className="text-xl text-slate-400 mb-8 max-w-3xl mx-auto">
-              Expert guidance for building AI-powered platforms, automation systems, and intelligent workflows.
-              Transform your ideas into production-ready solutions with enterprise-grade architecture.
+              AI chatbots and booking automation for Tulsa service businesses.
+              <span className="text-sky-400 font-semibold"> Flat fee. No monthly BS. Done tomorrow.</span>
             </p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex gap-4 justify-center flex-wrap">
               <Button
+                size="lg"
                 className="bg-sky-500 hover:bg-sky-400 text-black font-bold transition-all duration-300"
                 asChild
               >
-                <Link href="/consulting">Book Consultation</Link>
+                <a href="https://cal.com/clayton-c" target="_blank" rel="noopener noreferrer">
+                  Book Free 10-Min Call
+                </a>
               </Button>
               <Button
                 variant="outline"
+                size="lg"
                 className="border-sky-500/50 text-sky-400 hover:bg-sky-500/10"
                 asChild
               >
-                <Link href="/contact">Get in Touch</Link>
+                <Link href="#packages">View Packages</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-            <section className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-sky-500/5 via-violet-500/5 to-sky-500/5" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-500/10 via-transparent to-transparent animate-pulse" style={{ animationDuration: '4s' }} />
-        
+
         <div className="container mx-auto max-w-4xl relative z-10">
           <div className="glass-panel border-sky-500/20 p-8 rounded-2xl text-center hover:border-sky-500/40 transition-all duration-500 group cursor-pointer">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500/10 border border-sky-500/30 mb-6 group-hover:bg-sky-500/20 group-hover:border-sky-500/50 transition-all duration-300">
               <Users className="h-5 w-5 text-sky-400" />
               <span className="text-sm font-mono text-sky-400 uppercase tracking-wider">Client Portal</span>
             </div>
-            
+
             <h2 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
               Access Your Consultation Hub
             </h2>
-            
+
             <p className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">
               View your active consultations, join video sessions, share files, and collaborate with your consultant in real-time.
             </p>
-            
+
             <Button
               size="lg"
               className="bg-sky-500 hover:bg-sky-400 text-black font-bold text-lg px-8 py-6 h-auto transition-all duration-300 shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 group-hover:scale-105"
               asChild
             >
-              <Link href="/consulting">
+              <Link href="/dashboard">
                 <span className="flex items-center gap-2">
                   Open Consultation Hub
                   <Rocket className="h-5 w-5" />
                 </span>
               </Link>
             </Button>
-            
+
             <div className="mt-6 flex items-center justify-center gap-6 text-sm text-slate-500">
               <span className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-emerald-400" />
@@ -141,47 +171,71 @@ export default function ConsultingPage() {
                 Code Sandbox
               </span>
             </div>
-            
-            <div className="mt-8 pt-6 border-t border-white/10">
-              <Button
-                variant="ghost"
-                className="text-slate-400 hover:text-sky-400 hover:bg-sky-500/10"
-                asChild
-              >
-                <Link href="/consulting/room/demo">
-                  <span className="flex items-center gap-2">
-                    Try Demo Room
-                    <Rocket className="h-4 w-4" />
-                  </span>
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section id="packages" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-50 mb-4">Services</h2>
-            <div className="neon-line mx-auto w-24" />
+            <h2 className="text-3xl font-bold text-slate-50 mb-4">Choose Your Package</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              One-time setup fee. No monthly subscriptions. You own everything.
+            </p>
+            <div className="neon-line mx-auto w-24 mt-6" />
           </div>
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {services.map((service, index) => (
-              <Card key={index} className="glass-panel border-white/10 hover:border-sky-500/30 transition-all duration-300">
-                <CardHeader className="flex flex-row items-start gap-4">
-                  <div className="h-12 w-12 rounded-xl bg-sky-500/10 flex items-center justify-center flex-shrink-0">
-                    <service.icon className="h-6 w-6 text-sky-400" />
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {packages.map((pkg, index) => (
+              <Card 
+                key={index} 
+                className={`glass-panel border-white/10 hover:border-${pkg.color}-500/30 transition-all duration-300 ${pkg.featured ? 'border-emerald-500/30 ring-1 ring-emerald-500/20' : ''}`}
+              >
+                <CardHeader className="flex flex-col items-start">
+                  <div className={`h-12 w-12 rounded-xl bg-${pkg.color}-500/10 flex items-center justify-center mb-4`}>
+                    <pkg.icon className={`h-6 w-6 text-${pkg.color}-400`} />
                   </div>
-                  <div className="flex-1">
-                    <CardTitle className="text-sky-400 mb-2">{service.title}</CardTitle>
-                    <CardContent className="text-slate-400">
-                      {service.description}
-                    </CardContent>
-                  </div>
+                  <CardTitle className={`text-${pkg.color}-400 mb-2 text-2xl`}>{pkg.title}</CardTitle>
+                  <div className="text-4xl font-bold text-slate-50 mb-2">{pkg.price}</div>
+                  {pkg.featured && (
+                    <div className="text-xs font-mono px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-400 mb-2">
+                      MOST POPULAR
+                    </div>
+                  )}
                 </CardHeader>
+                <CardContent>
+                  <p className="text-slate-400 mb-4 text-sm">{pkg.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {pkg.features.map((feature, fIndex) => (
+                      <li key={fIndex} className="flex items-start gap-2 text-sm text-slate-300">
+                        <Check className="h-4 w-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="pt-4 border-t border-white/10">
+                    <p className="text-xs text-slate-500">
+                      <span className="text-slate-400 font-medium">Ideal for:</span> {pkg.ideal}
+                    </p>
+                  </div>
+                </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="text-center">
+            <Button
+              size="lg"
+              className="bg-sky-500 hover:bg-sky-400 text-black font-bold"
+              asChild
+            >
+              <a href="https://cal.com/clayton-c" target="_blank" rel="noopener noreferrer">
+                Book a Free 10-Minute Call
+              </a>
+            </Button>
+            <p className="text-slate-500 text-sm mt-4">
+              Big agencies take weeks and charge thousands. I'm local, I'm fast, and I charge once—not monthly.
+            </p>
           </div>
         </div>
       </section>
@@ -189,137 +243,102 @@ export default function ConsultingPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-50 mb-4">Expertise & Skills</h2>
-            <div className="neon-line mx-auto w-24" />
+            <h2 className="text-3xl font-bold text-slate-50 mb-4">Strategic Consulting</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              For businesses needing deeper AI strategy, audits, and ongoing optimization.
+            </p>
+            <div className="neon-line mx-auto w-24 mt-6" />
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {skills.map((skillGroup, groupIndex) => (
-              <div key={groupIndex} className="space-y-4">
-                <div className="text-sm font-mono text-sky-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4" />
-                  {skillGroup.category}
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {skillGroup.items.map((skill, itemIndex) => (
-                    <div
-                      key={`${groupIndex}-${itemIndex}`}
-                      className="glass-panel-solid border-white/10 p-3 rounded-lg hover:border-sky-500/30 transition-all duration-300"
-                    >
-                      <span className="text-slate-300">{skill}</span>
-                    </div>
-                  ))}
+
+          <div className="glass-panel border-white/10 p-8 rounded-2xl mb-12">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="h-12 w-12 rounded-xl bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+                    <Clock className="h-6 w-6 text-emerald-400" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-emerald-400 font-mono mb-1">FIRST-TIME CLIENTS</div>
+                    <div className="text-4xl font-bold text-slate-50">$85/hr</div>
+                    <p className="text-slate-400 text-sm mt-1">Introductory rate for new clients</p>
+                  </div>
                 </div>
               </div>
-            ))}
+
+              <div className="space-y-4">
+                <div className="text-sm text-sky-400 font-mono mb-2">ONGOING CONSULTING</div>
+                {consultingServices.map((service, index) => (
+                  <div key={index} className="flex justify-between items-start py-3 border-b border-white/5 last:border-0">
+                    <div>
+                      <div className="font-medium text-slate-200">{service.title}</div>
+                      <div className="text-sm text-slate-400">{service.description}</div>
+                    </div>
+                    <div className="text-sky-400 font-bold whitespace-nowrap ml-4">{service.price}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center p-6">
+              <div className="text-3xl font-bold text-emerald-400 mb-2">24 Hours</div>
+              <div className="text-slate-400">Average delivery time</div>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-3xl font-bold text-emerald-400 mb-2">$497+</div>
+              <div className="text-slate-400">One-time fee, no monthly costs</div>
+            </div>
+            <div className="text-center p-6">
+              <div className="text-3xl font-bold text-emerald-400 mb-2">Local</div>
+              <div className="text-slate-400">Tulsa-based, in-person available</div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-4xl">
-          <div className="glass-panel border-white/10 p-8 rounded-2xl">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="text-center md:text-left">
-                <h2 className="text-2xl font-bold text-slate-50 mb-4">Simple, Transparent Pricing</h2>
-                <p className="text-slate-400 mb-6">
-                  No hidden fees. No long-term contracts. Just expert help when you need it.
-                </p>
-                <div className="mb-6">
-                  <div className="text-6xl font-bold text-sky-400 mb-2">$85</div>
-                  <div className="text-sm text-slate-400">per hour</div>
-                </div>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Clock className="h-5 w-5 text-emerald-400 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-slate-300">Flexible Engagement</div>
-                      <div className="text-sm text-slate-400">Book by the hour, project-based, or retainer</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-emerald-400 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-slate-300">No Obligation</div>
-                      <div className="text-sm text-slate-400">Free initial consultation for qualified projects</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Users className="h-5 w-5 text-emerald-400 flex-shrink-0" />
-                    <div>
-                      <div className="font-semibold text-slate-300">Expert Results</div>
-                      <div className="text-sm text-slate-400">Production-ready, scalable, and maintainable</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="text-center md:text-left">
-                <h3 className="text-xl font-semibold text-slate-50 mb-4">Why Choose This Approach?</h3>
-                <p className="text-slate-400 mb-6">
-                  Technical expertise combined with practical business understanding. I don't just write code—I
-                  understand your objectives, timeline, and constraints to deliver solutions that actually work for your business.
-                </p>
-                <Button
-                  size="lg"
-                  className="bg-sky-500 hover:bg-sky-400 text-black font-bold w-full"
-                  asChild
-                >
-                  <Link href="/consulting">Schedule Your Free Consultation</Link>
-                </Button>
-              </div>
-            </div>
-      </div>
-    </div>
-  </section>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-50 mb-4">Our Agent Systems Framework</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              A structured approach to building AI agents with persistent memory, autonomous capabilities, and real business impact.
+            </p>
+          </div>
+          <ConsultationProcess />
+        </div>
+      </section>
 
-  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/20">
-    <div className="container mx-auto max-w-6xl">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-slate-50 mb-4">Our Agent Systems Framework</h2>
-        <p className="text-slate-400 max-w-2xl mx-auto">
-          A structured approach to building AI agents with persistent memory, autonomous capabilities, and real business impact.
-        </p>
-      </div>
-      <ConsultationProcess />
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900/20 to-transparent">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl font-bold text-slate-50 mb-4">Ready to Stop Missing Calls?</h2>
+          <p className="text-xl text-slate-400 mb-8">
+            Your first $497 is one conversation away. Book a free 10-minute call.
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Button
+              size="lg"
+              className="bg-sky-500 hover:bg-sky-400 text-black font-bold"
+              asChild
+            >
+              <a href="https://cal.com/clayton-c" target="_blank" rel="noopener noreferrer">
+                Book Free Call
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-sky-500/50 text-sky-400 hover:bg-sky-500/10"
+              asChild
+            >
+              <Link href="/contact">Contact Me</Link>
+            </Button>
+          </div>
+          <p className="text-slate-500 text-sm mt-6">
+            (539) 314-9375 · claydonjon@proton.me
+          </p>
+        </div>
+      </section>
     </div>
-  </section>
-
-  <section className="py-16 px-4 sm:px-6 lg:px-8">
-    <div className="container mx-auto max-w-4xl">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-slate-50 mb-4">Frequently Asked Questions</h2>
-        <p className="text-slate-400">
-          Everything you need to know about building agent systems
-        </p>
-      </div>
-      <ConsultationFAQ />
-    </div>
-  </section>
-
-  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900/20 to-transparent">
-    <div className="container mx-auto max-w-4xl text-center">
-      <h2 className="text-3xl font-bold text-slate-50 mb-4">Ready to Build Your Agent System?</h2>
-      <p className="text-xl text-slate-400 mb-8">
-        Let's discuss how autonomous agents can transform your business operations
-      </p>
-      <div className="flex gap-4 justify-center flex-wrap">
-        <Button
-          size="lg"
-          className="bg-sky-500 hover:bg-sky-400 text-black font-bold"
-          asChild
-        >
-          <Link href="/consulting">Book Free Consultation</Link>
-        </Button>
-        <Button
-          size="lg"
-          variant="outline"
-          className="border-sky-500/50 text-sky-400 hover:bg-sky-500/10"
-          asChild
-        >
-          <Link href="/contact">Contact Me</Link>
-        </Button>
-      </div>
-    </div>
-  </section>
-</div>
-)
+  )
 }
