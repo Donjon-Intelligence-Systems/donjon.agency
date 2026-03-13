@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { ArrowRight, Sparkles, Calendar, ExternalLink, Beaker, Wrench, Users, Rocket, MessageSquare, Shield, Check, X, Zap, Target, Lock, Bot, Headphones, CalendarDays, Mail, Search, MapPin, Calculator, BarChart3, FileCheck, Timer, HelpCircle, Shell } from "lucide-react"
+import { ArrowRight, Sparkles, Calendar, ExternalLink, Beaker, Wrench, Users, Rocket, MessageSquare, Shield, Check, X, Zap, Target, Lock, Bot, Headphones, CalendarDays, Mail, Search, MapPin, Calculator, BarChart3, FileCheck, Timer, HelpCircle, Shell, BookOpen, Download } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -187,6 +187,39 @@ const techStack = [
 export default function Home() {
   return (
     <main className="bg-[#030712] min-h-screen">
+      {/* Book Banner */}
+      <div className="bg-gradient-to-r from-sky-500/20 via-sky-500/10 to-indigo-500/20 border-b border-sky-500/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="h-10 w-10 rounded-lg bg-sky-500/20 flex items-center justify-center flex-shrink-0">
+                <BookOpen className="h-5 w-5 text-sky-400" />
+              </div>
+              <div>
+                <p className="text-white font-medium text-sm sm:text-base">
+                  <span className="text-sky-400 font-semibold">New:</span> Donjon at Work — The playbook for building autonomous AI systems
+                </p>
+                <p className="text-slate-400 text-xs sm:text-sm">Free digital book. Download or read online.</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <Button size="sm" className="bg-sky-500 hover:bg-sky-400 text-black font-bold" asChild>
+                <Link href="/book">
+                  Read Now
+                  <ArrowRight className="ml-1 h-3 w-3" />
+                </Link>
+              </Button>
+              <Button size="sm" variant="outline" className="border-white/20 text-white hover:bg-white/5" asChild>
+                <a href="/donjon-at-work.pdf" download className="flex items-center">
+                  <Download className="mr-1 h-3 w-3" />
+                  PDF
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section className="relative min-h-screen flex items-center justify-center pt-24 pb-32 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-sky-500/5 via-transparent to-indigo-500/5" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />

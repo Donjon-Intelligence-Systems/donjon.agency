@@ -60,16 +60,17 @@ export function MainNav() {
     external?: boolean
   }
 
-  const navigation: NavItem[] = [
-    { name: "Home", href: "/" },
-    { name: "Platforms", href: "/platforms/vibe-native", dropdown: true },
-    { name: "Services", href: "/services" },
-    { name: "Consulting", href: "/consulting" },
-    { name: "Knowledge Vault", href: "/knowledge-vault" },
-    { name: "Roadmap", href: "/roadmap" },
-    { name: "Labs", href: "/labs" },
-    { name: "About", href: "/about" },
-  ]
+const navigation: NavItem[] = [
+  { name: "Home", href: "/" },
+  { name: "Book", href: "/book" },
+  { name: "Platforms", href: "/platforms/vibe-native", dropdown: true },
+  { name: "Services", href: "/services" },
+  { name: "Consulting", href: "/consulting" },
+  { name: "Knowledge Vault", href: "/knowledge-vault" },
+  { name: "Roadmap", href: "/roadmap" },
+  { name: "Labs", href: "/labs" },
+  { name: "About", href: "/about" },
+]
 
   return (
     <header className="sticky top-0 z-50 w-full glass-panel border-b border-white/5 transition-all duration-300">
