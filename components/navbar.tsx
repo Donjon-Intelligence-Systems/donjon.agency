@@ -33,12 +33,13 @@ export function Navbar() {
   const router = useRouter()
   const { isLoggedIn, userRole, user, loading } = useNavbarAuth()
 
-  const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Solutions", href: "/solutions" },
-    { name: "Assessments", href: "/assessments" },
-    { name: "About", href: "/about" },
-  ]
+const navigation = [
+  { name: "Home", href: "/" },
+  { name: "Solutions", href: "/solutions" },
+  { name: "Assessments", href: "/assessments" },
+  { name: "About", href: "/about" },
+  { name: "Agentic Workforce", href: "/agentic-workforce" },
+]
 
   // Updated logout handler for Supabase
   const handleLogout = async () => {
