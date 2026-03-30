@@ -175,7 +175,7 @@ export default function AgenticWorkforcePage() {
   const [activeStage, setActiveStage] = useState(0)
   const [isWorkdayRunning, setIsWorkdayRunning] = useState(false)
   const [workdayIndex, setWorkdayIndex] = useState(-1)
-  const [workdaySpeed, setWorkdaySpeed] = useState(900)
+  const [workdaySpeed, setWorkdaySpeed] = useState(3600)
   const [activeActivities, setActiveActivities] = useState<ActivityMessage[]>([])
   const [councilVisible, setCouncilVisible] = useState([false, false, false, false])
   const [speakingAgent, setSpeakingAgent] = useState<number | null>(null)
@@ -210,7 +210,7 @@ export default function AgenticWorkforcePage() {
           return newState
         })
         setSpeakingAgent(idx)
-      }, idx * 1800)
+      }, idx * 4500)
     })
   }, [])
 
@@ -629,9 +629,10 @@ export default function AgenticWorkforcePage() {
                   onChange={(e) => setWorkdaySpeed(Number(e.target.value))}
                   className="bg-slate-800 border border-white/10 rounded px-2 py-1 text-sm"
                 >
-                  <option value="1800">Normal Speed</option>
-                  <option value="900">Fast</option>
-                  <option value="400">Very Fast</option>
+                  <option value="8000">Slow (Read Comfortably)</option>
+                  <option value="5000">Normal Speed</option>
+                  <option value="3000">Fast</option>
+                  <option value="1500">Very Fast</option>
                 </select>
               </div>
 

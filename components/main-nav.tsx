@@ -66,6 +66,7 @@ const navigation: NavItem[] = [
   { name: "Platforms", href: "/platforms/vibe-native", dropdown: true },
   { name: "Services", href: "/services" },
   { name: "Consulting", href: "/consulting" },
+  { name: "Agentic Workforce", href: "/agentic-workforce" },
   { name: "Knowledge Vault", href: "/knowledge-vault" },
   { name: "Roadmap", href: "/roadmap" },
   { name: "Labs", href: "/labs" },

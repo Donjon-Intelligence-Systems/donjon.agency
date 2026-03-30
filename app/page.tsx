@@ -808,19 +808,33 @@ style={tech.featured ? {} : { color: brandData?.color }}
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-slate-900/20 border-t border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+<section className="py-20 px-6 bg-slate-900/20 border-t border-white/5">
+<div className="max-w-7xl mx-auto">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<Link href="/agentic-workforce" className="glass-panel p-8 border-white/10 hover:border-sky-500/30 transition-all duration-300 group relative overflow-hidden">
+<div className="absolute top-0 right-0 px-3 py-1 bg-sky-500/20 text-sky-400 text-xs font-mono uppercase">New</div>
+<div className="h-14 w-14 rounded-xl bg-sky-500/10 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+<Sparkles className="h-7 w-7 text-sky-400" />
+</div>
+<h3 className="text-xl font-semibold text-slate-50 mb-3">Agentic Workforce</h3>
+<p className="text-slate-400 mb-4">
+38 AI employees working 24/7. Your complete AI team that never sleeps, from developers to analysts.
+</p>
+<span className="text-sky-400 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+Meet Your Team <ArrowRight className="h-4 w-4" />
+</span>
+</Link>
+
 <Link href="/consulting" className="glass-panel p-8 border-white/10 hover:border-sky-500/30 transition-all duration-300 group">
 <div className="h-14 w-14 rounded-xl bg-sky-500/10 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
 <Users className="h-7 w-7 text-sky-400" />
 </div>
 <h3 className="text-xl font-semibold text-slate-50 mb-3">Consulting</h3>
 <p className="text-slate-400 mb-4">
-AI chatbots from $497, booking automation from $697. First-time clients: $85/hr. Done in 24 hours.
+$250 per session — 90 minutes with deliverables, 7-day follow-up support, and priority booking.
 </p>
 <span className="text-sky-400 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
-Learn More <ArrowRight className="h-4 w-4" />
+Book a Session <ArrowRight className="h-4 w-4" />
 </span>
 </Link>
 
@@ -830,28 +844,28 @@ Learn More <ArrowRight className="h-4 w-4" />
 </div>
 <h3 className="text-xl font-semibold text-slate-50 mb-3">Services</h3>
 <p className="text-slate-400 mb-4">
-Full-stack development, AI platforms, custom automation systems, and enterprise solutions.
+Platform architecture, database design, workflow automation, and full-stack development.
 </p>
 <span className="text-emerald-400 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
 View Services <ArrowRight className="h-4 w-4" />
 </span>
 </Link>
 
-            <Link href="/labs" className="glass-panel p-8 border-white/10 hover:border-violet-500/30 transition-all duration-300 group">
-              <div className="h-14 w-14 rounded-xl bg-violet-500/10 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
-                <Beaker className="h-7 w-7 text-violet-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-slate-50 mb-3">Labs</h3>
-              <p className="text-slate-400 mb-4">
-                Experimental AI agents, creative projects, and innovative tools in development.
-              </p>
-              <span className="text-violet-400 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
-                Explore Labs <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
-          </div>
-        </div>
-      </section>
+<Link href="/labs" className="glass-panel p-8 border-white/10 hover:border-violet-500/30 transition-all duration-300 group">
+<div className="h-14 w-14 rounded-xl bg-violet-500/10 flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+<Beaker className="h-7 w-7 text-violet-400" />
+</div>
+<h3 className="text-xl font-semibold text-slate-50 mb-3">Labs</h3>
+<p className="text-slate-400 mb-4">
+Experimental AI agents, creative projects, and innovative tools in development.
+</p>
+<span className="text-violet-400 text-sm font-medium flex items-center gap-2 group-hover:gap-3 transition-all">
+Explore Labs <ArrowRight className="h-4 w-4" />
+</span>
+</Link>
+</div>
+</div>
+</section>
     </main>
   )
 }
