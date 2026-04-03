@@ -267,6 +267,41 @@ export default function BridgeFundingPage() {
         </div>
       </section>
 
+      {/* Dw Benchmark */}
+      <section className="py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-sm font-mono text-orange-400 uppercase tracking-wider mb-3">Measuring Productivity</div>
+          <h2 className="text-3xl font-bold text-white mb-6">The Dwight (Dw) Schrute Benchmark</h2>
+
+          <p className="text-slate-400 mb-4">
+            How do you measure an AI workforce? Not in tokens per second — in work done. The Dwight Schrute Benchmark (Dw) is a new standard we're developing to quantify AI agent productivity in human-equivalent units. One Dw equals one full human office worker's 8-hour shift output: emails triaged, reports written, meetings scheduled, trackers updated. Real office work, measured rigorously.
+          </p>
+
+          <p className="text-slate-400 mb-6">
+            The benchmark is nearly complete. Early results are coming in — and they are astonishingly productive. In initial runs, agents are completing full 8-hour workloads in a fraction of the time, projecting theoretical output rates that dwarf what any single human employee could accomplish in a day.
+          </p>
+
+          <div className="glass-panel border-l-4 border-l-indigo-500 p-6 my-6">
+            <p className="text-slate-300 italic">
+              The Dwight (Dw) Schrute Benchmark will be built directly into Doer — Donjon's agent control plane — to continuously monitor and report on agent and organizational productivity. Every team, every task, scored in real time.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-3 gap-6 mt-8">
+            {[
+              { label: "1 Dw", desc: "One human's full 8-hour shift output" },
+              { label: "DPS", desc: "Dwights Per Shift — throughput × quality" },
+              { label: "Built-in", desc: "Native to Doer's control plane" },
+            ].map((item) => (
+              <div key={item.label} className="glass-panel p-4 border-white/10 text-center">
+                <div className="text-lg font-bold text-indigo-400 mb-1 font-mono">{item.label}</div>
+                <div className="text-xs text-slate-500">{item.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* The Ask */}
       <section className="py-16 px-6 bg-gradient-to-b from-slate-900/40 to-transparent">
         <div className="max-w-3xl mx-auto text-center">
