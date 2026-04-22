@@ -3,6 +3,7 @@ import "@/app/globals.css"
 import { Outfit, Fira_Code } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { MainNavWrapper } from "@/components/main-nav-wrapper"
+import { RotatingBanner } from "@/components/rotating-banner"
 import { ChatButton } from "@/components/chat-button"
 import { Footer } from "@/components/footer"
 import { SupabaseAuthProvider } from "@/providers/supabase-auth-provider"
@@ -40,6 +41,7 @@ export default function RootLayout({
             <SynapseBackground />
             <div className="relative z-10 flex min-h-screen flex-col">
               <MainNavWrapper />
+              <RotatingBanner />
               <main className="flex-1">{children}</main>
               <Footer />
               <ChatButton />

@@ -63,6 +63,7 @@ export function MainNav() {
 const navigation: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "Book", href: "/book" },
+  { name: "Blog", href: "/blog" },
   { name: "Platforms", href: "/platforms/vibe-native", dropdown: true },
   { name: "Services", href: "/services" },
   { name: "Consulting", href: "/consulting" },
