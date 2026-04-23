@@ -2,7 +2,6 @@
 name: workspace-guide
 description: Workspace guide to introduce OpenWork and onboard new users.
 ---
-
 # Welcome to OpenWork
 
 Hi, I'm Ben and this is OpenWork. It's an open-source alternative to Claude's cowork. It helps you work on your files with AI and automate the mundane tasks so you don't have to.

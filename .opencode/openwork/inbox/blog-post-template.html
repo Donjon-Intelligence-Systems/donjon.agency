@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Post Title | Paperclip</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* ===== CSS Variables ===== */
+    :root {
+      /* Colors */
+      --color-bg: #fafafa;
+      --color-bg-card: #ffffff;
+      --color-text: #1a1a1a;
+      --color-text-secondary: #4a4a4a;
+      --color-text-muted: #6b6b6b;
+      --color-border: #e5e5e5;
+      --color-border-light: #f0f0f0;
+      --color-accent: #2563eb;
+      --color-accent-hover: #1d4ed8;
+      --color-accent-light: #eff6ff;
+      
+      /* Typography */
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-serif: 'Merriweather', Georgia, serif;
+      
+      /* Spacing Scale */
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      
+      /* Shadows */
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      
+      /* Border Radius */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+    }
+
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ===== Layout ===== */
+    .blog-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: var(--space-8) var(--space-6);
+    }
+
+    @media (max-width: 768px) {
+      .blog-container {
+        padding: var(--space-6) var(--space-4);
+      }
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      text-align: center;
+      padding: var(--space-16) 0 var(--space-12);
+      border-bottom: 1px solid var(--color-border-light);
+      margin-bottom: var(--space-12);
+    }
+
+    .hero__category {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-accent);
+      background: var(--color-accent-light);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-4);
+    }
+
+    .hero__title {
+      font-family: var(--font-sans);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin-bottom: var(--space-6);
+      letter-spacing: -0.02em;
+    }
+
+    .hero__subtitle {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto var(--space-8);
+    }
+
+    .hero__meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-4);
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+
+    .hero__meta-dot {
+      width: 4px;
+      height: 4px;
+      background: var(--color-text-muted);
+      border-radius: 50%;
+    }
+
+    .hero__read-time {
+      font-weight: 500;
+    }
+
+    /* ===== Article Content ===== */
+    .article {
+      background: var(--color-bg-card);
+      padding: var(--space-12);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (max-width: 768px) {
+      .article {
+        padding: var(--space-6);
+      }
+    }
+
+    /* Typography Hierarchy */
+    .article h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: var(--space-6);
+      color: var(--color-text);
+    }
+
+    .article h2 {
+      font-family: var(--font-sans);
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-top: var(--space-12);
+      margin-bottom: var(--space-4);
+      color: var(--color-text);
+    }
+
+    .article h3 {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-top: var(--space-8);
+      margin-bottom: var(--space-3);
+      color: var(--color-text);
+    }
+
+    .article p {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: var(--color-text);
+      margin-bottom: var(--space-6);
+    }
+
+    .article p.lead {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--color-text-secondary);
+      border-left: 3px solid var(--color-accent);
+      padding-left: var(--space-4);
+      margin: var(--space-8) 0;
+    }
+
+    .article a {
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .article a:hover {
+      color: var(--color-accent-hover);
+    }
+
+    .article ul, .article ol {
+      margin: var(--space-6) 0;
+      padding-left: var(--space-6);
+    }
+
+    .article li {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: var(--space-2);
+    }
+
+    .article blockquote {
+      border-left: 4px solid var(--color-accent);
+      padding-left: var(--space-6);
+      margin: var(--space-8) 0;
+      font-style: italic;
+      color: var(--color-text-secondary);
+    }
+
+    .article blockquote p {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .article blockquote cite {
+      display: block;
+      margin-top: var(--space-4);
+      font-size: 0.875rem;
+      font-style: normal;
+      color: var(--color-text-muted);
+    }
+
+    .article code {
+      font-family: 'SF Mono', Monaco, monospace;
+      font-size: 0.9em;
+      background: var(--color-bg);
+      padding: var(--space-1) var(--space-2);
+      border-radius: var(--radius-sm);
+      color: var(--color-accent);
+    }
+
+    .article pre {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      padding: var(--space-6);
+      border-radius: var(--radius-md);
+      overflow-x: auto;
+      margin: var(--space-6) 0;
+    }
+
+    .article pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+
+    .article img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--radius-md);
+      margin: var(--space-8) 0;
+    }
+
+    .article figure {
+      margin: var(--space-8) 0;
+    }
+
+    .article figcaption {
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-top: var(--space-3);
+    }
+
+    .article hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--space-12) 0;
+    }
+
+    /* ===== Highlight Box ===== */
+    .highlight-box {
+      background: var(--color-accent-light);
+      border-left: 4px solid var(--color-accent);
+      padding: var(--space-6);
+      margin: var(--space-8) 0;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .highlight-box__title {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-bottom: var(--space-3);
+    }
+
+    .highlight-box p {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ===== Call-to-Action ===== */
+    .cta-section {
+      margin: var(--space-16) 0;
+      padding: var(--space-10);
+      background: linear-gradient(135deg, var(--color-accent) 0%, #1d4ed8 100%);
+      border-radius: var(--radius-lg);
+      text-align: center;
+      color: white;
+    }
+
+    .cta-section__title {
+      font-family: var(--font-sans);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: var(--space-3);
+    }
+
+    .cta-section__text {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: var(--space-6);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      background: white;
+      color: var(--color-accent);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: var(--space-4) var(--space-8);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      color: var(--color-accent-hover);
+    }
+
+    /* ===== Social Sharing ===== */
+    .social-share {
+      margin: var(--space-12) 0;
+      padding: var(--space-6);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .social-share__title {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-4);
+    }
+
+    .social-share__buttons {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    .social-share__button {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-5);
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-card);
+      color: var(--color-text);
+    }
+
+    .social-share__button:hover {
+      background: var(--color-bg);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .social-share__button--twitter:hover {
+      background: #1da1f2;
+      color: white;
+      border-color: #1da1f2;
+    }
+
+    .social-share__button--linkedin:hover {
+      background: #0077b5;
+      color: white;
+      border-color: #0077b5;
+    }
+
+    .social-share__button--facebook:hover {
+      background: #4267B2;
+      color: white;
+      border-color: #4267B2;
+    }
+
+    /* ===== Author Bio ===== */
+    .author-bio {
+      display: flex;
+      gap: var(--space-5);
+      padding: var(--space-8);
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      margin-top: var(--space-12);
+      border: 1px solid var(--color-border-light);
+    }
+
+    @media (max-width: 768px) {
+      .author-bio {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-6);
+      }
+    }
+
+    .author-bio__avatar {
+      flex-shrink: 0;
+    }
+
+    .author-bio__avatar img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-border-light);
+    }
+
+    .author-bio__content {
+      flex: 1;
+    }
+
+    .author-bio__name {
+      font-family: var(--font-sans);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-1);
+    }
+
+    .author-bio__role {
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-3);
+    }
+
+    .author-bio__bio {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-4);
+    }
+
+    .author-bio__social {
+      display: flex;
+      gap: var(--space-3);
+    }
+
+    @media (max-width: 768px) {
+      .author-bio__social {
+        justify-content: center;
+      }
+    }
+
+    .author-bio__social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--color-bg);
+      color: var(--color-text-secondary);
+      transition: all 0.2s ease;
+    }
+
+    .author-bio__social-link:hover {
+      background: var(--color-accent);
+      color: white;
+    }
+
+    /* ===== Tags ===== */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin: var(--space-8) 0;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      background: var(--color-bg);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      border: 1px solid var(--color-border-light);
+      transition: all 0.2s ease;
+    }
+
+    .tag:hover {
+      background: var(--color-accent-light);
+      color: var(--color-accent);
+      border-color: var(--color-accent);
+    }
+
+    /* ===== Navigation ===== */
+    .post-navigation {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6);
+      margin-top: var(--space-12);
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-border);
+    }
+
+    @media (max-width: 768px) {
+      .post-navigation {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .post-navigation__link {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-5);
+      background: var(--color-bg-card);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border-light);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .post-navigation__link:hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .post-navigation__label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-2);
+    }
+
+    .post-navigation__link--next .post-navigation__label {
+      text-align: right;
+    }
+
+    .post-navigation__title {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .post-navigation__link--next .post-navigation__title {
+      text-align: right;
+    }
+
+    /* ===== Subscribe Section ===== */
+    .subscribe {
+      margin-top: var(--space-16);
+      padding: var(--space-10);
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .subscribe__title {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: var(--space-2);
+    }
+
+    .subscribe__text {
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-6);
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .subscribe__form {
+      display: flex;
+      gap: var(--space-3);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .subscribe__form {
+        flex-direction: column;
+      }
+    }
+
+    .subscribe__input {
+      flex: 1;
+      padding: var(--space-3) var(--space-4);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .subscribe__input:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+
+    .subscribe__button {
+      padding: var(--space-3) var(--space-6);
+      background: var(--color-accent);
+      color: white;
+      border: none;
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .subscribe__button:hover {
+      background: var(--color-accent-hover);
+    }
+
+    /* ===== Footer ===== */
+    .blog-footer {
+      margin-top: var(--space-16);
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ===== Icons (inline SVG) ===== */
+    .icon {
+      width: 1em;
+      height: 1em;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <!-- Hero Section -->
+    <header class="hero">
+      <span class="hero__category">Agentic Workflows</span>
+      <h1 class="hero__title">How to Build an Autonomous Team That Actually Ships</h1>
+      <p class="hero__subtitle">The practical playbook for small teams who want to compete in the agentic age—without hiring an army.</p>
+      <div class="hero__meta">
+        <time datetime="2026-04-15">April 15, 2026</time>
+        <span class="hero__meta-dot"></span>
+        <span class="hero__read-time">8 min read</span>
+      </div>
+    </header>
+
+    <!-- Article Content -->
+    <article class="article">
+      <!-- Lead Paragraph -->
+      <p class="lead">
+        Most companies think "autonomous agents" means replacing people. The teams that are winning know better: agents are amplifiers, not replacements. Here's how to build a workflow where humans and agents each do what they're best at.
+      </p>
+
+      <!-- Section 1 -->
+      <h2>The Problem: More Tools, Less Output</h2>
+      <p>
+        You've seen it before. A team adopts a new AI tool promising 10x productivity. Three months later, nothing's changed except the tool stack got more complicated. The promise of automation became another thing to manage.
+      </p>
+      <p>
+        The issue isn't the tools. It's the workflow. Most teams bolt agents onto existing processes instead of redesigning the process around what agents do best.
+      </p>
+
+      <!-- Highlight Box -->
+      <div class="highlight-box">
+        <div class="highlight-box__title">💡 Key Insight</div>
+        <p>Agents excel at breadth, iteration, and tireless execution. Humans excel at judgment, taste, and strategic decisions. Design your workflow accordingly.</p>
+      </div>
+
+      <!-- Section 2 -->
+      <h2>A Better Model: The Gremlin Approach</h2>
+      <p>
+        At Donjon Intelligence Systems, we run what we call "gremlin teams"—small units of specialized agents, each with a narrow focus, orchestrated by a human lead who makes the calls only humans can make.
+      </p>
+      <p>
+        Each gremlin has a specialty. One researches. One writes code. One designs. One tests. They don't compete; they complete each other. The human orchestrator (we call them Alfie) assigns work, reviews output, and decides when something's ready to ship.
+      </p>
+
+      <blockquote>
+        <p>"The best agentic workflows feel invisible. The work just happens, and the human stays in control of what matters."</p>
+        <cite>— Clay, Founder, Donjon Intelligence Systems</cite>
+      </blockquote>
+
+      <!-- Section 3 -->
+      <h3>How It Works in Practice</h3>
+      <p>
+        Let's say you need a blog post. In a traditional workflow, you'd write it yourself or assign it to a writer. In a gremlin workflow:
+      </p>
+      <ul>
+        <li><strong>Research Gremlin</strong> finds trending topics and competitor content</li>
+        <li><strong>Strategy Gremlin</strong> picks the angle and structure</li>
+        <li><strong>Content Gremlin</strong> writes the first draft</li>
+        <li><strong>Editor Gremlin</strong> reviews for clarity and consistency</li>
+        <li><strong>Human (you)</strong> reviews, adds taste, approves for publish</li>
+      </ul>
+      <p>
+        The whole thing takes 20 minutes of human time instead of 4 hours. And the output is often better because you had four perspectives instead of one.
+      </p>
+
+      <hr>
+
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <h2 class="cta-section__title">Ready to build your first gremlin team?</h2>
+        <p class="cta-section__text">Join 500+ teams using Paperclip to orchestrate autonomous agents that actually ship.</p>
+        <a href="#" class="cta-button">
+          Start Free Trial
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Tags -->
+      <div class="tags">
+        <a href="#" class="tag">Agentic Workflows</a>
+        <a href="#" class="tag">Team Building</a>
+        <a href="#" class="tag">AI Strategy</a>
+        <a href="#" class="tag">Productivity</a>
+      </div>
+    </article>
+
+    <!-- Social Sharing -->
+    <div class="social-share">
+      <div class="social-share__title">Share this post</div>
+      <div class="social-share__buttons">
+        <a href="#" class="social-share__button social-share__button--twitter" aria-label="Share on Twitter">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+          Twitter
+        </a>
+        <a href="#" class="social-share__button social-share__button--linkedin" aria-label="Share on LinkedIn">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="#" class="social-share__button social-share__button--facebook" aria-label="Share on Facebook">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+
+    <!-- Author Bio -->
+    <aside class="author-bio">
+      <div class="author-bio__avatar">
+        <img src="https://ui-avatars.com/api/?name=Siren&background=2563eb&color=fff&size=160" alt="Siren - Content Marketing Specialist">
+      </div>
+      <div class="author-bio__content">
+        <h3 class="author-bio__name">Siren</h3>
+        <p class="author-bio__role">Content Marketing Specialist</p>
+        <p class="author-bio__bio">I make people stop scrolling and pay attention. I craft content that sounds unmistakably like Donjon Intelligence Systems and turns technical work into stories people actually want to share.</p>
+        <div class="author-bio__social">
+          <a href="#" class="author-bio__social-link" aria-label="Twitter">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231z"/></svg>
+          </a>
+          <a href="#" class="author-bio__social-link" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg>
+          </a>
+          <a href="#" class="author-bio__social-link" aria-label="Website">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22c-5.523 0-10-4.477-10-10S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-15v6h8v-2h-6V7h-2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Post Navigation -->
+    <nav class="post-navigation">
+      <a href="#" class="post-navigation__link">
+        <span class="post-navigation__label">← Previous</span>
+        <span class="post-navigation__title">Why Your AI Implementation is Failing (And How to Fix It)</span>
+      </a>
+      <a href="#" class="post-navigation__link post-navigation__link--next">
+        <span class="post-navigation__label">Next →</span>
+        <span class="post-navigation__title">The 5-Minute Setup Guide for Paperclip</span>
+      </a>
+    </nav>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe">
+      <h2 class="subscribe__title">Get more posts like this</h2>
+      <p class="subscribe__text">Join the newsletter for weekly insights on building autonomous teams that ship.</p>
+      <form class="subscribe__form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+        <input type="email" class="subscribe__input" placeholder="your@email.com" required>
+        <button type="submit" class="subscribe__button">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="blog-footer">
+      <p>© 2026 Donjon Intelligence Systems. Powered by Paperclip.</p>
+    </footer>
+  </div>
+</body>
+</html>

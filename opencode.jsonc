@@ -15,10 +15,24 @@
       "oauth": {},
       "type": "remote",
       "url": "https://mcp.notion.com/mcp"
+    },
+    "control-chrome": {
+      "type": "local",
+      "command": [
+        "chrome-devtools-mcp"
+      ]
+    },
+    "pieces": {
+      "type": "remote",
+      "enabled": true,
+      "url": "https://0a9f-2607-fb91-5380-aed2-c56-5afd-ce35-a2a0.ngrok-free.app"
     }
   },
   "plugin": [
     "opencode-scheduler"
   ],
-  "model": "google/antigravity-gemini-3-flash"
+  "model": "openrouter/openrouter/elephant-alpha",
+  "disabled_providers": [
+    "google"
+  ]
 }
